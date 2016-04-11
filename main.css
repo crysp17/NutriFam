@@ -230,3 +230,11 @@ svg{
     font-size: 18pt;
     margin: 15px;
 }
+
+#profile-header-info{
+    font-size: 20pt;
+}
+
+#profile-header-picture{
+    float: left;
+}
