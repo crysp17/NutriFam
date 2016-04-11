@@ -1,14 +1,14 @@
 $(function() {
     recipes = [];
     nutrition = {
-        'ground beef':{unit: 'lb.', fat: 68, calories: 975, protein: 84, carb: 0},
-        'tomato sauce':{unit: 'cup', fat: 1, calories: 59, protein: 3, carb: 13},
-        'lasagna noodles':{unit: 'lb.', fat: 8, calories: 1600, protein: 56, carb: 336},
-        'ricotta':{unit: 'oz.', fat: 32, calories:428, protein:28, carb: 7},
-        'mozzarella':{unit: 'oz.', fat: 6, calories: 85, protein: 6, carb: 1}
+        'ground beef':{unit: 'lb.', fat: 68, calories: 975, protein: 84, carbs: 0},
+        'tomato sauce':{unit: 'cup', fat: 1, calories: 59, protein: 3, carbs: 13},
+        'lasagna noodles':{unit: 'lb.', fat: 8, calories: 1600, protein: 56, carbs: 336},
+        'ricotta':{unit: 'oz.', fat: 32, calories:428, protein:28, carbs: 7},
+        'mozzarella':{unit: 'oz.', fat: 6, calories: 85, protein: 6, carbs: 1}
     };
     $('#add-ingredient').click(function(){
-        newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'each'>each</option></select></td></tr>"
+        newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'cup'>cup</option></select></td></tr>"
         $('#ingredients tr:last').after(newrow);
         helper();
     })
@@ -54,6 +54,35 @@ function helper(){
         if (val in nutrition){
             $(this).parent().parent().find('.in-unit').val(nutrition[val].unit);
         }
+    });
+    $('.in-amt').focusout(function(){
+        var servings = 1.0;
+        var cal = 0;
+        var fat = 0;
+        var carbs = 0;
+        var prot = 0;
+        if (parseInt($('#recipe-servings').val()) > 0){
+            servings = parseInt($('#recipe-servings').val())*1.0;
+        }
+        $('.ingredient').each(function(i,e){
+            var item = $(this).find('.in-item').val();
+            var amt = parseInt($(this).find('.in-amt').val());
+            if (item in nutrition){
+                cal += nutrition[item].calories * amt;
+                fat += nutrition[item].fat * amt;
+                carbs += nutrition[item].carbs * amt;
+                prot += nutrition[item].protein * amt;
+            }
+        })
+        cal /= servings;
+        $('#cal-amt').text(cal);
+        fat /= servings;
+        $('#fat-amt').text(fat);
+        carbs /= servings;
+        $('#carbs-amt').text(carbs);
+        prot /= servings;
+        $('#prot-amt').text(prot);
+
     })
     $('.in-item').autocomplete({
         source: Object.keys(nutrition),

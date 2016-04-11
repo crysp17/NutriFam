@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>NutriFam</title>
+</head>
+
+<body>
+<nav id = 'header' class = 'navbar navbar-default'>
+    <ul class = 'nav navbar-nav navbar-left'>
+        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '150' width = '600'></a>
+    </ul>
+    <ul class = 'nav navbar-nav navbar-right'>
+        <div id = 'dailytip'> 
+            <p><b>Tip of the Day</b></p>
+            <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
+        </div>
+    </ul>
+</nav>
+<div id = 'sidebar'>
+    <ul class = nav nav-pills nav-stacked>
+        <li> 
+            <a href="calendar.html">
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendar
+            </a> 
+        </li>
+        <li> 
+            <a href="recipebook.html">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Recipes
+            </a> 
+        </li>
+        <li role="presentation" class="dropdown" id = 'famprof'>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              Family Nutrition <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Joanne</a></li>
+                <li><a href="jimbob.html">Jimbob</a></li>
+                <li><a href="#">Matthew</a></li>
+                <li><a href="#">Mark</a></li>
+                <li><a href="#">Luke</a></li>
+                <li><a href="#">John</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id = 'main'>
+</div>
+<!-- Load style sheets -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css" />
+
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="jimbob.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</body>
+
+</html>
