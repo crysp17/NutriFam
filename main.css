@@ -1,0 +1,236 @@
+body{
+    background-color: AliceBlue;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background-color: WhiteSmoke;
+}
+
+#header{
+    background-color: #addce6;
+}
+#logo{
+    padding: 0;
+    border: 0;
+    
+}
+
+#dailytip{
+    font-size: 16pt;
+    border: 1px;
+    border-radius: 10px;
+    border-color: gray;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px 50px;
+    width:550px;
+    text-align: center;
+    color: #666666;
+}
+
+#sidebar{
+    position:absolute;
+    top: 153px; 
+    bottom:0; 
+    left:0;
+    width:20%;
+    background-color: #d8eff3;
+    font-size: 24pt;
+    color: Maroon;
+    height: 100%;
+}
+
+#sidebar a{
+    color: Maroon;
+}
+
+#main{
+    position:absolute;
+    top: 152px; 
+    bottom:0; 
+    right:0;
+    width:80%;
+    padding: 50px;
+}
+
+#famprof ul{
+    font-size: 20pt;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0px;
+    width: 100%;
+}
+
+#famprof li{
+    padding: 3px 30px;
+}
+
+#myCarousel{
+    display:block;
+    width: 70%;
+    height: 70%;
+    margin: 50px auto;
+}
+
+.famday{
+    font-size: 24pt;
+    background-color: White;
+    padding: 50px;
+    height: 100%;
+    color: #666666;
+}
+
+.famday p{
+    padding: 3px;
+}
+
+.carousel-inner{
+    height: 100%;
+}
+
+.item{
+    height:100%;
+}
+
+#dayHeader{
+    display: block;
+    font-size: 24pt;
+    text-align: center;
+    color: #666666;
+}
+
+svg{
+    margin: 20px;
+}
+
+#calendar{
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid gray;
+
+}
+
+#calendar td{
+    border: 1px solid gray;
+}
+
+#dates{
+    background-color: Maroon;
+    color: WhiteSmoke;
+    font-size: 16pt;
+}
+
+.calendar-header{
+    background-color: #addce6;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+.fam{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #d8eff3;
+    margin: 0px 5px 5px;
+}
+
+#recipe-input{
+    border: 1px solid gray;
+    width: 535px;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+#nutrition-display{
+    position: absolute;
+    left: 635px;
+    top: 50px;
+    border: 1px solid gray;
+    width: 535px;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+#recipe-input div{
+    margin: 20px;
+}
+
+#recipe-input input[type="checkbox"]{
+    margin: 5px;
+}
+
+#ingredients{
+    margin: 5px;
+    margin-left: 25px;
+}
+
+#ingredients th,td{
+    padding: 5px;
+}
+#directions{
+    padding-left: 30px;
+}
+
+.direction{
+    width: 415px;
+    vertical-align: top;
+    margin: 5px 0px;
+}
+
+#add-ingredient, #add-direction{
+    background: linear-gradient(#d8eff3,#addce6);
+    border-radius: 10px;
+    border:none;
+}
+#save-recipe{
+    color: WhiteSmoke;
+    background: linear-gradient(Maroon, #600000);
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    width: 250px;
+    margin: 10px 122px;
+}
+
+#rec-book-header{
+    font-size: 24pt;
+}
+
+#rec-book-header button{
+    position: absolute;
+    right: 0;
+    background: linear-gradient(Maroon, #600000);
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    font-size: 16pt;
+    margin: 0px 50px;
+}
+
+#rec-book-header a{
+    color: WhiteSmoke;
+    mouseover: none;
+    text-decoration: none;
+    width: 200px;
+}
+
+.in-amt{
+    width: 80px;
+}
+
+.in-item{
+    width: 235px;
+}
+.in-unit{
+    height: 100%;
+    width: 80px;
+}
+#nutr-header{
+    text-align: center;
+    font-size: 18pt;
+}
+
+#recipe-list li{
+    font-size: 18pt;
+    margin: 15px;
+}
