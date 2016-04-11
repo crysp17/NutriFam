@@ -4,7 +4,7 @@ $(function() {
         'ground beef':{unit: 'lb.', fat: 68, calories: 975, protein: 84, carbs: 0},
         'tomato sauce':{unit: 'cup', fat: 1, calories: 59, protein: 3, carbs: 13},
         'lasagna noodles':{unit: 'lb.', fat: 8, calories: 1600, protein: 56, carbs: 336},
-        'ricotta':{unit: 'oz.', fat: 32, calories:428, protein:28, carbs: 7},
+        'ricotta':{unit: 'oz.', fat: 4, calories:52, protein:3, carbs: 1},
         'mozzarella':{unit: 'oz.', fat: 6, calories: 85, protein: 6, carbs: 1}
     };
     $('#add-ingredient').click(function(){
