@@ -205,14 +205,10 @@ svg{
     padding: 10px;
     font-size: 16pt;
     margin: 0px 50px;
+    width: 200px;
+    color: WhiteSmoke;
 }
 
-#rec-book-header a{
-    color: WhiteSmoke;
-    mouseover: none;
-    text-decoration: none;
-    width: 200px;
-}
 
 .in-amt{
     width: 80px;
