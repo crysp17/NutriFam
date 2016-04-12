@@ -51,8 +51,12 @@ function helper(){
 
     $('.in-item').focusout(function(){
         var val = $(this).val();
+        var unit = $(this).parent().parent().find('.in-unit');
         if (val in nutrition){
-            $(this).parent().parent().find('.in-unit').val(nutrition[val].unit);
+            unit.val(nutrition[val].unit);
+            unit.prop('disabled',true);
+        }else{
+            unit.prop('disabled',false);
         }
     });
     $('.in-amt').focusout(function(){
