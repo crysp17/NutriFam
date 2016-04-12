@@ -237,4 +237,21 @@ svg{
 
 #profile-header-picture{
     float: left;
+    margin-right: 50px;
+}
+
+#profile-first-row{
+    font-size: 40pt;
+}
+
+#profile-second-row{
+    font-size: 40pt;
+}
+
+#profile-top-stuff{
+    float: left;
+}
+
+#profile-bottom-stuff{
+    float: left;
 }
