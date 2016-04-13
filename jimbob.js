@@ -1,10 +1,7 @@
 $(function() {
-    var famday = {Joanne:[{label: 'Fat', value: 395},{label: 'Protein', value:376},{label: 'Carbs', value:681}],
-        Jimbob:[{label: 'Fat', value: 530},{label: 'Protein', value: 300},{label: 'Carbs', value: 920}],
-        Matthew:[{label: 'Fat', value: 507},{label: 'Protein', value: 320},{label: 'Carbs', value: 1052}],
-        Mark:[{label: 'Fat', value: 525},{label: 'Protein', value: 285},{label: 'Carbs', value: 933}],}
-    var width = 200;
-    var height = 200;
+    var famday = { Jimbob:[{label: 'Fat', value: 30.7},{label: 'Protein', value: 14.9},{label: 'Carbs', value: 50.1}], }
+    var width = 280;
+    var height = 280;
     var radius = Math.min(width,height)/2;
     var colors = ['CornflowerBlue','Salmon','#b4f49f'];
     var fam = Object.keys(famday);

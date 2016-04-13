@@ -14,26 +14,26 @@ body{
 }
 
 #dailytip{
-    font-size: 16pt;
+    font-size: 14pt;
     border: 1px;
     border-radius: 10px;
     border-color: gray;
     border-style: solid;
-    padding: 10px;
-    margin: 10px 50px;
-    width:550px;
+    padding: 5px;
+    margin: 5px 50px;
+    width:450px;
     text-align: center;
     color: #666666;
 }
 
 #sidebar{
     position:absolute;
-    top: 153px; 
+    top: 126px; 
     bottom:0; 
     left:0;
     width:20%;
     background-color: #d8eff3;
-    font-size: 24pt;
+    font-size: 22pt;
     color: Maroon;
     height: 100%;
 }
@@ -44,7 +44,7 @@ body{
 
 #main{
     position:absolute;
-    top: 152px; 
+    top: 126px; 
     bottom:0; 
     right:0;
     width:80%;
@@ -71,7 +71,7 @@ body{
 }
 
 .famday{
-    font-size: 24pt;
+    font-size: 20pt;
     background-color: White;
     padding: 50px;
     height: 100%;
@@ -80,6 +80,10 @@ body{
 
 .famday p{
     padding: 3px;
+}
+
+.famday table{
+    margin: auto;
 }
 
 .carousel-inner{
@@ -92,7 +96,7 @@ body{
 
 #dayHeader{
     display: block;
-    font-size: 24pt;
+    font-size: 22pt;
     text-align: center;
     color: #666666;
 }
@@ -146,7 +150,7 @@ svg{
     left: 635px;
     top: 50px;
     border: 1px solid gray;
-    width: 535px;
+    width: 335px;
     font-size: 16pt;
     padding: 10px;
 }
@@ -193,7 +197,7 @@ svg{
 }
 
 #rec-book-header{
-    font-size: 24pt;
+    font-size: 22pt;
 }
 
 #rec-book-header button{
@@ -203,7 +207,7 @@ svg{
     border-radius: 10px;
     border:none;
     padding: 10px;
-    font-size: 16pt;
+    font-size: 18pt;
     margin: 0px 50px;
     width: 200px;
     color: WhiteSmoke;
@@ -237,4 +241,67 @@ svg{
 
 #profile-header-picture{
     float: left;
+    margin-right: 40px;
+}
+
+#cal-pie{
+    text-align: center;
+}
+
+#profile-first-row{
+    font-size: 40pt;
+    overflow:auto;
+    margin-left:280px;
+}
+
+#profile-second-row{
+    font-size: 40pt;
+    border-style: solid;
+    border-bottom: double;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 1260px;
+}
+
+#profile-third-row{
+    font-size: 40pt;
+    margin-top: 20px;
+}
+
+#profile-top-stuff{
+    float: left;
+}
+
+#profile-bottom-stuff{
+    float: left;
+    margin-left: 10px;
+}
+
+table#calorie_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    float:right;
+    margin:35px;
+}
+table#calorie_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#calorie_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#calorie_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#calorie_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.caret {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid;
 }

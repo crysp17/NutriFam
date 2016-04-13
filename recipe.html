@@ -10,7 +10,7 @@
 <body>
 <nav id = 'header' class = 'navbar navbar-default'>
     <ul class = 'nav navbar-nav navbar-left'>
-        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '150' width = '600'></a>
+        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
     </ul>
     <ul class = 'nav navbar-nav navbar-right'>
         <div id = 'dailytip'> 
@@ -75,6 +75,25 @@
 
         </div>
     </div>
+    <div id = 'nutrition-display'>
+        <div id = 'nutr-header'>Nutrition Per Serving</div>
+        <div id = 'calories'>
+            <b>Calories: </b>555
+        </div>
+        <div id = 'fat'>
+            <div style = 'display: inline-block; height: 18px; width: 18px; background-color:CornflowerBlue;'></div>
+            <b>Fat: </b>25 g.
+        </div>
+        <div id = 'carbs'>
+            <div style = 'display: inline-block; height: 18px; width: 18px; background-color:#b4f49f;'></div>
+            <b>Carbs: </b>52 g.
+        </div>
+        <div id = 'protein'>
+            <div style = 'display: inline-block; height: 18px; width: 18px; background-color:Salmon;'></div>
+            <b>Protein: </b>32 g.
+        </div>
+        <div id= 'cal-pie'>
+    </div> 
 </div>
 <!-- Load style sheets -->
 <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -86,6 +105,28 @@
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+    $(function() {
+        var data = [25*9, 52*4, 32*4];
+        var colors = ['CornflowerBlue', '#b4f49f', 'Salmon'];
+        var width = 200;
+        var svg = d3.select('#cal-pie')
+            .append('svg')
+            .attr('width', width)
+            .attr('height', width)
+            .append('g')
+            .attr('transform', 'translate('+(width/2)+','+(width/2)+')')
+        var arc = d3.svg.arc().outerRadius(width/2);
+        var pie = d3.layout.pie().value(function(d){return d;}).sort(null);
+        var path = svg.selectAll('path')
+            .data(pie(data))
+            .enter()
+            .append('path')
+            .attr('d', arc)
+            .attr('fill', function(d, i){return colors[i];});
+    })
+
+</script>
 
 </body>
 
