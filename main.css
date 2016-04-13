@@ -300,3 +300,8 @@ table#calorie_table th {
     padding-left: 15px;
     padding-right: 15px;
 }
+.caret {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid;
+}
