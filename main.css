@@ -241,6 +241,7 @@ svg{
 
 #profile-header-picture{
     float: left;
+    margin-right: 40px;
 }
 
 #cal-pie{
@@ -249,10 +250,23 @@ svg{
 
 #profile-first-row{
     font-size: 40pt;
+    overflow:auto;
+    margin-left:280px;
 }
 
 #profile-second-row{
     font-size: 40pt;
+    border-style: solid;
+    border-bottom: double;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 1260px;
+}
+
+#profile-third-row{
+    font-size: 40pt;
+    margin-top: 20px;
 }
 
 #profile-top-stuff{
@@ -261,4 +275,28 @@ svg{
 
 #profile-bottom-stuff{
     float: left;
+    margin-left: 10px;
+}
+
+table#calorie_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    float:right;
+    margin:35px;
+}
+table#calorie_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#calorie_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#calorie_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#calorie_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
 }
