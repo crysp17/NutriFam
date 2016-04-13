@@ -251,26 +251,35 @@ svg{
 #profile-first-row{
     font-size: 40pt;
     overflow:auto;
-    margin-left:280px;
+    margin-left:160px;
 }
 
 #profile-second-row{
     font-size: 40pt;
     border-style: solid;
     border-bottom: double;
-    border-top: none;
+    border-top: double;
     border-right: none;
     border-left: none;
     width: 1260px;
+    height: 500px;
+    overflow: hidden;
 }
 
 #profile-third-row{
     font-size: 40pt;
-    margin-top: 20px;
+    width: 1260px;
 }
 
 #profile-top-stuff{
     float: left;
+    margin-bottom: 35px;
+    border-style: solid;
+    border-bottom: double;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 40px;
 }
 
 #profile-bottom-stuff{
@@ -283,6 +292,9 @@ table#calorie_table {
     border-spacing:5px;
     float:right;
     margin:35px;
+    border: solid;
+    border-color: gray;
+    margin-right:190px;
 }
 table#calorie_table td {
     padding-left: 15px;
@@ -295,6 +307,54 @@ table#calorie_table tr:nth-child(odd) {
     background-color: #fff;
 }
 table#calorie_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table#lipid_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    margin:35px;
+    border: solid;
+    border-color: gray;
+}
+table#lipid_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#lipid_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#lipid_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#lipid_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table#protein_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    margin:35px;
+    border: solid;
+    border-color: gray;
+}
+table#protein_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#protein_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#protein_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#protein_table th {
     color: black;
     background-color: white;
     padding-left: 15px;
