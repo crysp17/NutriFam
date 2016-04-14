@@ -181,12 +181,12 @@ svg{
     margin: 5px 0px;
 }
 
-#add-ingredient, #add-direction{
+#add-ingredient, #add-direction, #add-meal{
     background: linear-gradient(#d8eff3,#addce6);
     border-radius: 10px;
     border:none;
 }
-#save-recipe{
+#save-recipe, #go-back{
     color: WhiteSmoke;
     background: linear-gradient(Maroon, #600000);
     border-radius: 10px;
@@ -194,6 +194,16 @@ svg{
     padding: 10px;
     width: 250px;
     margin: 10px 122px;
+}
+
+#save-recipe-to-calendar
+{
+    color: WhiteSmoke;
+    background: linear-gradient(Maroon, #600000);
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    padding-bottom: 50px;
 }
 
 #rec-book-header{
@@ -276,6 +286,37 @@ svg{
 #profile-bottom-stuff{
     float: left;
     margin-left: 10px;
+}
+
+#day-title{
+    text-align: left;
+}
+
+#day-content
+{
+    text-align: left;
+}
+
+#popupBoxOnePosition
+{
+    top: 0; left: 0; position: fixed; width: 100%; height: 120%;
+    background-color: rgba(0,0,0,0.7); display: none;
+}
+
+#popupBoxTwoPosition
+{
+    top: 75px; left: 250px; position: fixed; width: 100%; height: 120%;
+    background-color: rgba(0,0,0,0); display: none;
+}
+
+.popupBoxWrapper
+{
+    width: 550px; margin-left: 450px; margin-top: 300px; text-align: left;
+}
+
+.popupBoxContent
+{
+    background-color: #FFF; padding: 15px;
 }
 
 table#calorie_table {
