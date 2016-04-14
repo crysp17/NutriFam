@@ -1,5 +1,5 @@
 $(function() {
-    var famday = { Jimbob:[{label: 'Fat', value: 30.7},{label: 'Protein', value: 14.9},{label: 'Carbs', value: 50.1}], }
+    var famday = { Jimbob:[{label: 'Fat', value: 34.7},{label: 'Protein', value: 14.9},{label: 'Carbs', value: 50.4}], }
     var width = 280;
     var height = 280;
     var radius = Math.min(width,height)/2;
@@ -33,7 +33,7 @@ $(function() {
             return "translate(" + arc.centroid(d) + ")";
           })
           .attr("text-anchor", "middle")
-          .style("font-size", "14px")
+          .style("font-size", "18px")
           .text(function(d, ind) { return famday[fam[i]][ind].label; });
     }
 })
