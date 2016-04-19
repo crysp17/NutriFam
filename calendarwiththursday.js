@@ -57,7 +57,7 @@ $(function() {
 
             [{meal: 'Pork Chops', members: ['Joanne', 'Jimbob','Mark', 'Matthew']}],
 
-            [{}],
+            [{meal: 'Lasagna', members: ['Joanne', 'Jimbob','Mark', 'Matthew']}],
 
             [{meal: 'Fried Rice', members: ['Joanne', 'Jimbob','Mark', 'Matthew']}],
 
@@ -74,19 +74,12 @@ $(function() {
             var day = m[j]
             var col = '<td>';
             for (var k = 0; k < day.length; k++){
-                if(day[k].meal == null)
-                {
-                  col += '<div class = "meal"><p><b><a href="dayview.html">Add a meal</a></b></p>';
+                var meal = day[k];
+                col += '<div class = "meal"><p><b>'+meal.meal+'</b></p>';
+                for (var l = 0; l < meal.members.length; l++){
+                    col += '<div class = "fam">'+nickname[meal.members[l]]+'</div>'
                 }
-                else
-                {
-                  var meal = day[k];
-                  col += '<div class = "meal"><p><b>'+meal.meal+'</b></p>';
-                  for (var l = 0; l < meal.members.length; l++){
-                      col += '<div class = "fam">'+nickname[meal.members[l]]+'</div>'
-                  }
-                  col += '</div>';
-                }
+                col += '</div>';
             }
             col += '</td>';
             row.append(col);   
@@ -95,7 +88,6 @@ $(function() {
     }
 
     var table = $('calendar');
-    /*
     for(var i = 0; i < table.rows.length; i++)
     {
       for(var j = 0; j < table.rows[i].cells.length; j++)
@@ -103,7 +95,6 @@ $(function() {
         table.rows[i].cells[j].onclick = (function(i,j) {
                 return function () 
                 {
-                  location.href = "dayview.html";
                   if(!(i==2 || i==4 || i==6))
                   {
                     //if the row doesn't contain meal information,
@@ -137,11 +128,11 @@ $(function() {
                         curMeals.append(meals[dinner][j][k]);
                       }
                     }
+
                   }
                 };
             }(i, j));
       }
     }
-    */
 
 })
