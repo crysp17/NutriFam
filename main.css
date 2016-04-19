@@ -1,11 +1,10 @@
 body{
-    background-color: AliceBlue;
+    background-color: #FFFFFF;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
-    background-color: WhiteSmoke;
 }
 
 #header{
-    background-color: #addce6;
+    background-color: #388E3C;
 }
 #logo{
     padding: 0;
@@ -17,13 +16,13 @@ body{
     font-size: 14pt;
     border: 1px;
     border-radius: 10px;
-    border-color: gray;
+    border-color: #FFFFFF;
     border-style: solid;
     padding: 5px;
     margin: 5px 50px;
     width:450px;
     text-align: center;
-    color: #666666;
+    color: #FFFFFF;
 }
 
 #sidebar{
@@ -32,14 +31,14 @@ body{
     bottom:0; 
     left:0;
     width:20%;
-    background-color: #d8eff3;
+    background-color: #4CAF50;
     font-size: 22pt;
-    color: Maroon;
+    color: #FFFFFF;
     height: 100%;
 }
 
 #sidebar a{
-    color: Maroon;
+    color: #FFFFFF;
 }
 
 #main{
@@ -118,13 +117,13 @@ svg{
 }
 
 #dates{
-    background-color: Maroon;
-    color: WhiteSmoke;
+    background-color: #FFFFFF;
+    color: #000000;
     font-size: 16pt;
 }
 
 .calendar-header{
-    background-color: #addce6;
+    background-color: #03A9F4;
     font-size: 14pt;
     font-style: italic;
 }
