@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>NutriFam</title>
+</head>
+
+<body>
+<nav id = 'header' class = 'navbar navbar-default'>
+    <ul class = 'nav navbar-nav navbar-left'>
+        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
+    </ul>
+    <ul class = 'nav navbar-nav navbar-right'>
+        <div id = 'dailytip'> 
+            <p><b>Tip of the Day</b></p>
+            <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
+        </div>
+    </ul>
+</nav>
+<div id = 'sidebar'>
+    <ul class = nav nav-pills nav-stacked>
+        <li id="sidebar-selected"> 
+            <a href="index.html">
+                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Today's Eats
+            </a> 
+        </li>
+        <li> 
+            <a href="calendar.html">
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Week's Eats
+            </a> 
+        </li>
+        <li> 
+            <a href="recipebook.html">
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Recipes
+            </a> 
+        </li>
+        <div id = "nutrition-reports-div">
+            <li role="presentation" class="dropdown" id = 'famprof'>
+                <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> -->
+                  <span id="reports"> <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports</span> <!-- <span class="caret"></span> -->
+                <!-- </a> -->
+                <ul class="dropdown-menu">
+                    <li><a href="#">Joanne</a></li>
+                    <li><a href="jimbob.html">Jimbob</a></li>
+                    <li><a href="#">Matthew</a></li>
+                    <li><a href="#">Mark</a></li>
+                    <li><a href="#">Luke</a></li>
+                    <li><a href="#">John</a></li>
+                </ul>
+            </li>
+        </div>
+    </ul>
+</div>
+<div id = 'main'>
+
+<div id = 'dayHeader'>
+    Hi, Joanne! Here's what your family is eating today.
+</div>
+
+<div id = 'entireFamilyMeals'>
+<table border="0">
+<tr>
+<td>
+    <div id = 'mealEntryLogo'>
+        <img src="images/JoanneLogo.png" height="25%" width="25%">
+    </div>
+    <div id = 'mealEntryWords'>
+        <h3>Joanne's Day</h3>
+        <h4>Breakfast: Oatmeal</h4>
+        <h4>Lunch: Quesadilla</h4>
+        <h4>Dinner: Chicken Alfredo</h4>
+    </div>
+</td>
+<td>
+    <div id = 'mealEntryLogo'>
+        <img src="images/JimbobLogo.png" height="25%" width="25%">
+    </div>
+    <div id = 'mealEntryWords'>
+        <h3>Jimbob's Day</h3>
+        <h4>Breakfast: Oatmeal</h4>
+        <h4>Lunch: Quesadilla</h4>
+        <h4>Dinner: Chicken Alfredo</h4>
+    </div>
+</td>
+<td>
+    <div id = 'mealEntryLogo'>
+        <img src="images/MatthewLogo.png" height="25%" width="25%">
+    </div>
+    <div id = 'mealEntryWords'>
+        <h3>Matthew's Day</h3>
+        <h4>Breakfast: Cheerios</h4>
+        <h4>Lunch: Tuna Sandwich</h4>
+        <h4>Dinner: Chicken Alfredo</h4>
+    </div>
+</td>
+</tr>
+<tr>
+<td>
+    <div id = 'mealEntryLogo'>
+        <img src="images/MarkLogo.png" height="25%" width="25%">
+    </div>
+    <div id = 'mealEntryWords'>
+        <h3>Mark's Day</h3>
+        <h4>Breakfast: Cheerios</h4>
+        <h4>Lunch: Tuna Sandwich</h4>
+        <h4>Dinner: Chicken Alfredo</h4>
+    </div>
+</td>
+<td>
+    <div id = 'mealEntryLogo'>
+        <img src="images/LukeLogo.png" height="25%" width="25%">
+    </div>
+    <div id = 'mealEntryWords'>
+        <h3>Luke's Day</h3>
+        <h4>Breakfast: Cheerios</h4>
+        <h4>Lunch: Tuna Sandwich</h4>
+        <h4>Dinner: Chicken Alfredo</h4>
+    </div>
+</td>
+<td>
+    <div id = 'mealEntryLogo'>
+        <img src="images/JohnLogo.png" height="25%" width="25%">
+    </div>
+    <div id = 'mealEntryWords'>
+        <h3>John's Day</h3>
+        <h4>Breakfast: Cheerios</h4>
+        <h4>Lunch: Tuna Sandwich</h4>
+        <h4>Dinner: Chicken Alfredo</h4>
+    </div>
+</td>
+</tr>
+</table>
+</div>
+
+</div>
+<!-- Load style sheets -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css" />
+
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,463 @@
+body{
+    background-color: #FFFFFF;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#header{
+    background-color: #388E3C;
+}
+#logo{
+    padding: 0;
+    border: 0;
+    
+}
+
+#dailytip{
+    font-size: 14pt;
+    border: 1px;
+    border-radius: 10px;
+    border-color: #FFFFFF;
+    border-style: solid;
+    padding: 5px;
+    margin: 5px 50px;
+    width:450px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#sidebar{
+    position:absolute;
+    top: 126px; 
+    bottom:0; 
+    left:0;
+    width:20%;
+    background-color: #4CAF50;
+    font-size: 22pt;
+    color: #FFF;
+    height: 100%;
+}
+
+#sidebar a, #sidebar #reports{
+    color: #FFF;
+}
+
+#sidebar li a:hover{
+    background-color: #C63719;
+    text-decoration: none; 
+}
+
+#sidebar-selected {
+    background-color: #D63719;
+}
+
+.dropdown-menu{
+    display: block;
+}
+
+.dropdown-toggle:active, .open .dropdown-toggle {
+    background:#C63719 !important; 
+}
+
+#nutrition-reports-div {
+    padding-top: 7.5%;
+}
+
+#main{
+    position:absolute;
+    top: 126px; 
+    bottom:0; 
+    right:0;
+    width:80%;
+    padding: 50px;
+}
+
+#famprof ul{
+    font-size: 20pt;
+    background-color: transparent;
+    box-shadow: none;
+    border: 0px;
+    width: 100%;
+    list-style-type: none;
+}
+
+#famprof li{
+    padding: 3px 30px;
+}
+
+#myCarousel{
+    display:block;
+    width: 70%;
+    height: 70%;
+    margin: 50px auto;
+}
+
+.famday{
+    font-size: 20pt;
+    background-color: White;
+    padding: 50px;
+    height: 100%;
+    color: #666666;
+}
+
+.famday p{
+    padding: 3px;
+}
+
+.famday table{
+    margin: auto;
+}
+
+.carousel-inner{
+    height: 100%;
+}
+
+.item{
+    height:100%;
+}
+
+#dayHeader{
+    display: block;
+    font-size: 22pt;
+    text-align: center;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+#entireFamilyMeals{
+
+}
+
+svg{
+    margin: 20px;
+}
+
+.calendar{
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid gray;
+
+}
+
+.calendar td{
+    border: 1px solid gray;
+}
+
+.calendar tr td:nth-child(odd)
+{
+    background: #FFFFFF;
+}
+
+.calendar tr td:nth-child(even)
+{
+    background: #F0F0F0;
+}
+
+
+#dates{
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 16pt;
+}
+
+.calendar-header{
+    background-color: #03A9F4;
+    font-size: 14pt;
+    font-style: italic;
+}
+
+.fam{
+    display: inline-block;
+    width:30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: 0px 5px 5px;
+}
+
+#recipe-input{
+    border: 1px solid gray;
+    width: 535px;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+#nutrition-display{
+    position: absolute;
+    left: 635px;
+    top: 50px;
+    border: 1px solid gray;
+    width: 335px;
+    font-size: 16pt;
+    padding: 10px;
+}
+
+#recipe-input div{
+    margin: 20px;
+}
+
+#recipe-input input[type="checkbox"]{
+    margin: 5px;
+}
+
+#ingredients{
+    margin: 5px;
+    margin-left: 25px;
+}
+
+#ingredients th,td{
+    padding: 5px;
+}
+#directions{
+    padding-left: 30px;
+}
+
+.direction{
+    width: 415px;
+    vertical-align: top;
+    margin: 5px 0px;
+}
+
+#add-ingredient, #add-direction, #add-meal{
+    background: linear-gradient(#d8eff3,#addce6);
+    border-radius: 10px;
+    border:none;
+}
+#save-recipe, #go-back{
+    color: WhiteSmoke;
+    background: linear-gradient(Maroon, #600000);
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    width: 250px;
+    margin: 10px 122px;
+}
+
+#save-recipe-to-calendar
+{
+    color: WhiteSmoke;
+    background: linear-gradient(Maroon, #600000);
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+#rec-book-header{
+    font-size: 22pt;
+}
+
+#rec-book-header button{
+    position: absolute;
+    right: 0;
+    background: linear-gradient(Maroon, #600000);
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    font-size: 18pt;
+    margin: 0px 50px;
+    width: 200px;
+    color: WhiteSmoke;
+}
+
+
+.in-amt{
+    width: 80px;
+}
+
+.in-item{
+    width: 235px;
+}
+.in-unit{
+    height: 100%;
+    width: 80px;
+}
+#nutr-header{
+    text-align: center;
+    font-size: 18pt;
+}
+
+#recipe-list li{
+    font-size: 18pt;
+    margin: 15px;
+}
+
+#profile-header-info{
+    font-size: 20pt;
+}
+
+#profile-header-picture{
+    float: left;
+    margin-right: 40px;
+}
+
+#cal-pie{
+    text-align: center;
+}
+
+#profile-first-row{
+}
+#Jimbob-calorie-source {
+    float: left;
+    text-align:center;
+}  
+#Jimbobpie {
+    display: inline;
+}
+#Jimbob-calorie-table {
+    display: inline;
+}
+
+#profile-second-row{
+    clear: all;
+    margin: auto;
+    font-size: 20pt;
+    border-style: solid;
+    border-bottom: double;
+    border-top: double;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+} 
+
+#profile-third-row{
+    font-size: 40pt;
+    width: 100%;
+}
+
+#profile-top-stuff{
+    float: left;
+    margin-bottom: 35px;
+    border-style: solid;
+    border-bottom: double;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 40px;
+}
+
+#profile-bottom-stuff{
+    float: left;
+    margin-left: 10px;
+}
+
+#day-title{
+    text-align: left;
+}
+
+#day-content
+{
+    text-align: left;
+}
+
+#popupBoxOnePosition
+{
+    top: 0; left: 0; position: fixed; width: 100%; height: 120%;
+    background-color: rgba(0,0,0,0.7); display: none;
+}
+
+#popupBoxTwoPosition
+{
+    top: 75px; left: 250px; position: fixed; width: 100%; height: 120%;
+    background-color: rgba(0,0,0,0); display: none;
+}
+
+.popupBoxWrapper
+{
+    width: 550px; margin-left: 450px; margin-top: 300px; text-align: left;
+}
+
+.popupBoxContent
+{
+    background-color: #FFF; padding: 15px;
+}
+
+table#calorie_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    /*float:right;*/
+    display: inline;
+    margin:35px;
+    border: solid;
+    border-color: gray;
+    margin-right:190px;
+}
+table#calorie_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#calorie_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#calorie_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#calorie_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table#lipid_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    margin:35px;
+    border: solid;
+    border-color: gray;
+}
+table#lipid_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#lipid_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#lipid_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#lipid_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+table#protein_table {
+    font-size: 18pt;
+    border-spacing:5px;
+    margin:35px;
+    border: solid;
+    border-color: gray;
+}
+table#protein_table td {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+table#protein_table tr:nth-child(even) {
+    background-color: #eee;
+}
+table#protein_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#protein_table th {
+    color: black;
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.caret {
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid;
+}
+
+#mealEntryWords {
+    float: right;
+}
+
+#mealEntryLogo {
+    display: inline;
+}
