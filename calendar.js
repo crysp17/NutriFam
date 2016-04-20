@@ -66,6 +66,7 @@ $(function() {
         }
 
     var nickname = {Joanne: 'Jo', Jimbob: 'Ji', Matthew: 'Mt', Mark: 'Mr'};
+    var fam_colors = {Joanne: 'red', Jimbob: 'blue', Matthew: 'yellow', Mark: 'green'};
     var keys = Object.keys(meals);
     for (var i = 0; i < keys.length; i++){
         var m = meals[keys[i]];
@@ -83,7 +84,7 @@ $(function() {
                   var meal = day[k];
                   col += '<div class = "meal"><p><b>'+meal.meal+'</b></p>';
                   for (var l = 0; l < meal.members.length; l++){
-                      col += '<div class = "fam">'+nickname[meal.members[l]]+'</div>'
+                      col += '<div class = "fam" style = "background-color:'+fam_colors[meal.members[l]]+'">'+nickname[meal.members[l]]+'</div>'
                   }
                   col += '</div>';
                 }
