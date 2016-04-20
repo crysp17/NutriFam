@@ -98,6 +98,11 @@ body{
     font-size: 22pt;
     text-align: center;
     color: #666666;
+    margin-bottom: 20px;
+}
+
+#entireFamilyMeals{
+
 }
 
 svg{
@@ -405,4 +410,15 @@ table#protein_table th {
     border-left: 9px solid transparent;
     border-right: 9px solid transparent;
     border-top: 9px solid;
+}
+
+#mealEntryWords {
+    float: right;
+    width: 200px;
+}
+
+#mealEntryLogo {
+    float: left;
+    padding: 10px;
+    padding-top: 15px;
 }
