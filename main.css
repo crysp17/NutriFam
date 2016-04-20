@@ -109,7 +109,7 @@ svg{
     margin: 20px;
 }
 
-#calendar{
+.calendar{
     text-align: center;
     border-collapse: collapse;
     table-layout: fixed;
@@ -117,9 +117,20 @@ svg{
 
 }
 
-#calendar td{
+.calendar td{
     border: 1px solid gray;
 }
+
+.calendar tr td:nth-child(odd)
+{
+    background: #FFFFFF;
+}
+
+.calendar tr td:nth-child(even)
+{
+    background: #F0F0F0;
+}
+
 
 #dates{
     background-color: #FFFFFF;
@@ -138,7 +149,6 @@ svg{
     width:30px;
     height: 30px;
     border-radius: 15px;
-    background-color: #d8eff3;
     margin: 0px 5px 5px;
 }
 
