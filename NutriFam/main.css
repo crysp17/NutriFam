@@ -325,16 +325,21 @@ svg{
 }
 
 #profile-first-row{
+    font-size: 16pt;
+    margin: auto;
 }
 #Jimbob-calorie-source {
     float: left;
     text-align:center;
+    margin: 20px;
 }  
 #Jimbobpie {
-    display: inline;
+    float:left;
+    margin: 20px;
 }
-#Jimbob-calorie-table {
-    display: inline;
+
+#calorie-table{
+    margin: 20px;
 }
 
 #profile-second-row{
