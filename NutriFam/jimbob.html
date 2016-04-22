@@ -10,7 +10,7 @@
 <body>
 <nav id = 'header' class = 'navbar navbar-default'>
     <ul class = 'nav navbar-nav navbar-left'>
-        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
+        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '125'></a>
     </ul>
     <ul class = 'nav navbar-nav navbar-right'>
         <div id = 'dailytip'> 
@@ -36,21 +36,19 @@
                 <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Recipes
             </a> 
         </li>
-        <div id = "nutrition-reports-div">
-            <li role="presentation" class="dropdown" id = 'famprof'>
-                <!-- <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> -->
-                  <span id="reports"> <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports</span> <!-- <span class="caret"></span> -->
-                <!-- </a> -->
-                <ul class="dropdown-menu">
-                    <li><a href="#">Joanne</a></li>
-                    <li><a id="sidebar-selected" href="jimbob.html">Jimbob</a></li>
-                    <li><a href="#">Matthew</a></li>
-                    <li><a href="#">Mark</a></li>
-                    <li><a href="#">Luke</a></li>
-                    <li><a href="#">John</a></li>
-                </ul>
-            </li>
-        </div>
+        <li role="presentation" class="dropdown" id = 'famprof'>
+            <span id = 'nutri-rep'>
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
+            </span>
+            <ul class="dropdown-menu">
+                <li><a href="#">Joanne</a></li>
+                <li id = 'sidebar-selected'><a href="jimbob.html">Jimbob</a></li>
+                <li><a href="#">Matthew</a></li>
+                <li><a href="#">Mark</a></li>
+                <li><a href="#">Luke</a></li>
+                <li><a href="#">John</a></li>
+            </ul>
+        </li>
     </ul>
 </div>
 <div id = 'main'>

@@ -1,28 +1,51 @@
+:root{
+    --main-bg-color: #9adfe5;
+    --secondary-bg-color: #d6f2f5;
+    --main-text-color: DimGray;
+    --accent-bg-color: #FE5F55;
+    --accent-text-color: white;
+}
+
 body{
     background-color: #FFFFFF;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 #header{
-    background-color: #388E3C;
+    background-color: var(--main-bg-color);
 }
 #logo{
     padding: 0;
     border: 0;
-    
+    width: 200px;
+}
+#logo:img{
+    width: 200px;
+}
+#logo:after{
+    content: "NutriFam";
+    font-size: 87px;
+    color: var(--main-text-color);
+    vertical-align: bottom;
+    padding: none;
+    margin: none;
+}
+
+#logo:hover{
+    text-decoration: none;
 }
 
 #dailytip{
     font-size: 14pt;
     border: 1px;
     border-radius: 10px;
-    border-color: #FFFFFF;
+    border-color: var(--main-text-color);
     border-style: solid;
     padding: 5px;
     margin: 5px 50px;
     width:450px;
     text-align: center;
-    color: #FFFFFF;
+    color: var(--main-text-color);
 }
 
 #sidebar{
@@ -30,36 +53,43 @@ body{
     top: 126px; 
     bottom:0; 
     left:0;
-    width:20%;
-    background-color: #4CAF50;
+    background-color: var(--secondary-bg-color);
     font-size: 22pt;
-    color: #FFF;
+    color: var(--main-text-color);
     height: 100%;
 }
 
 #sidebar a, #sidebar #reports{
-    color: #FFF;
+    color: var(--main-text-color);
 }
 
-#sidebar li a:hover{
-    background-color: #C63719;
+#sidebar li:hover{
+    background-color: var(--main-bg-color);
     text-decoration: none; 
+    color: var(--main-text-color);
+}
+
+#sidebar a:hover{
+    background-color: var(--main-bg-color);
+    text-decoration: none; 
+    color: var(--main-text-color);
 }
 
 #sidebar-selected {
-    background-color: #D63719;
+    background-color: var(--accent-bg-color);
+}
+
+#sidebar-selected a{
+    color: var(--accent-text-color);
 }
 
 .dropdown-menu{
     display: block;
 }
 
-.dropdown-toggle:active, .open .dropdown-toggle {
-    background:#C63719 !important; 
-}
-
-#nutrition-reports-div {
-    padding-top: 7.5%;
+#nutri-rep{
+    padding: 10px 15px;
+    background-color: var(--secondary-bg-color);
 }
 
 #main{
@@ -223,8 +253,8 @@ svg{
     border:none;
 }
 #save-recipe, #go-back{
-    color: WhiteSmoke;
-    background: linear-gradient(Maroon, #600000);
+    color: var(--accent-text-color);
+    background: var(--accent-bg-color);
     border-radius: 10px;
     border:none;
     padding: 10px;
@@ -234,8 +264,8 @@ svg{
 
 #save-recipe-to-calendar
 {
-    color: WhiteSmoke;
-    background: linear-gradient(Maroon, #600000);
+    color: var(--accent-text-color);
+    background: var(--accent-bg-color);
     border-radius: 10px;
     border:none;
     padding: 10px;
@@ -249,7 +279,7 @@ svg{
 #rec-book-header button{
     position: absolute;
     right: 0;
-    background: linear-gradient(Maroon, #600000);
+    background: var(--accent-bg-color);
     border-radius: 10px;
     border:none;
     padding: 10px;
