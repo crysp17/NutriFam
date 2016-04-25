@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=ABeeZee");
+
 :root{
     --main-bg-color: #9adfe5;
     --secondary-bg-color: #d6f2f5;
@@ -29,6 +31,7 @@ body{
     vertical-align: bottom;
     padding: none;
     margin: none;
+    font-family: 'ABeeZee', sans-serif;
 }
 
 #logo:hover{
@@ -326,7 +329,6 @@ svg{
 
 #profile-first-row{
     font-size: 16pt;
-    margin: auto;
 }
 #Jimbob-calorie-source {
     float: left;
@@ -339,7 +341,12 @@ svg{
 }
 
 #calorie-table{
+    float: left;
     margin: 20px;
+}
+
+#calorie-table th,td{
+    padding: 10px;
 }
 
 #profile-second-row{
@@ -494,5 +501,11 @@ table#protein_table th {
 }
 
 #mealEntryLogo {
-    display: inline;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    font-size: 32pt;
+    text-align: center;
+    margin: 30px;
 }
