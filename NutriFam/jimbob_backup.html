@@ -10,7 +10,7 @@
 <body>
 <nav id = 'header' class = 'navbar navbar-default'>
     <ul class = 'nav navbar-nav navbar-left'>
-        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
+        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '125'></a>
     </ul>
     <ul class = 'nav navbar-nav navbar-right'>
         <div id = 'dailytip'> 
@@ -22,8 +22,13 @@
 <div id = 'sidebar'>
     <ul class = nav nav-pills nav-stacked>
         <li> 
+            <a href="index.html">
+                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Today's Eats
+            </a> 
+        </li>
+        <li> 
             <a href="calendar.html">
-                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendar
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Week's Eats
             </a> 
         </li>
         <li> 
@@ -32,12 +37,12 @@
             </a> 
         </li>
         <li role="presentation" class="dropdown" id = 'famprof'>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Family Nutrition <span class="caret"></span>
-            </a>
+            <span id = 'nutri-rep'>
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
+            </span>
             <ul class="dropdown-menu">
                 <li><a href="#">Joanne</a></li>
-                <li><a href="jimbob.html">Jimbob</a></li>
+                <li id = 'sidebar-selected'><a href="jimbob.html">Jimbob</a></li>
                 <li><a href="#">Matthew</a></li>
                 <li><a href="#">Mark</a></li>
                 <li><a href="#">Luke</a></li>
@@ -54,6 +59,11 @@
 
 <!-- Sarah's derpy stuff goes here -->
 <div id = 'main'>
+    <ul class="nav nav-tabs">
+  <li class="active"><a href="#">Daily</a></li>
+  <li><a href="#">Weekly</a></li>
+  <li><a href="#">Monthly</a></li>
+</ul>
     <div id = 'profile-top-stuff'>
         <div id = 'profile-header-picture'>
             <img src="images/blank_profile_pic.png" style="width:280px;height:280px;">
@@ -68,18 +78,16 @@
     </div>
     <div id = 'profile-bottom-stuff'>
         <div id = 'profile-first-row'>
-            <div style="float:left;padding-top:60px;padding-right:30px;text-align:center">
+            <div id = 'Jimbob-calorie-source'>
                 <h3>Calorie Source<br><u>Breakdown</u></h3>
                 <h4> Carbs: 50.4%</h4>
                 <h4> Fat: 34.7%</h4>
                 <h4> Protein: 14.9%</h4>
             </div>
-            <div id = 'Jimbobpie' style="float:left;"></div>
-            <table id="calorie_table">
+            <div id = 'Jimbobpie'></div>
+            <table id="calorie-table">
               <tr>
-                <th>Calories:</th>
-                <th>2262 kcal</th>
-                <th>113%</th>
+                <th colspan="3">Calories: 2262 kcal consumed</th>
               </tr>
               <tr>
                 <td>Fat:</td>
@@ -109,8 +117,8 @@
             </table>
         </div>
         <div id = 'profile-second-row'>
-            <div id="vitamin_chart" style="float:left;display:block;width:600px;margin-top:20px;"></div>
-            <div id="mineral_chart" style="float:left;display:block;width:600px;margin-top:20px;margin-left:20px"></div>
+            <div id="vitamin_chart" style="float:left;display:block;width:50%;margin-top:20px;"></div>
+            <div id="mineral_chart" style="float:left;display:block;width:50%;margin-top:20px;"></div>
         </div>
         <div id = 'profile-third-row'>
             <div style="float:left;padding-left:80px;margin-top:10px;">
