@@ -169,6 +169,7 @@ svg{
     border-collapse: collapse;
     table-layout: fixed;
     border: 1px solid gray;
+    color: var(--main-text-color);
 
 }
 
@@ -176,25 +177,45 @@ svg{
     border: 1px solid gray;
 }
 
-.calendar tr td:nth-child(odd)
+#breakfast td:nth-child(odd)
 {
     background: #FFFFFF;
 }
 
-.calendar tr td:nth-child(even)
+#breakfast td:nth-child(even)
+{
+    background: #F0F0F0;
+}#lunch td:nth-child(odd)
+{
+    background: #FFFFFF;
+}
+
+#lunch td:nth-child(even)
 {
     background: #F0F0F0;
 }
 
+#dinner td:nth-child(odd)
+{
+    background: #FFFFFF;
+}
 
-#dates{
-    background-color: #FFFFFF;
-    color: #000000;
+#dinner td:nth-child(even)
+{
+    background: #F0F0F0;
+}
+
+.calendar-header > td{
+    background-color: var(--secondary-bg-color);
+}
+
+#dates > td{
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-size: 16pt;
 }
 
 .calendar-header{
-    background-color: #03A9F4;
     font-size: 14pt;
     font-style: italic;
 }
