@@ -6,9 +6,22 @@ $(function() {
         'lasagna noodles':{unit: 'lb.', fat: 8, calories: 1600, protein: 56, carbs: 336},
         'ricotta':{unit: 'oz.', fat: 4, calories:52, protein:3, carbs: 1},
         'mozzarella':{unit: 'oz.', fat: 6, calories: 85, protein: 6, carbs: 1}
+        'chicken breast':{unit: 'oz.', fat: 4, calories:52, protein:3, carbs: 1},
+        'heavy cream':{unit: 'cup', fat: 4, calories:52, protein:3, carbs: 1},
+        'fettucine':{unit: 'lb.', fat: 4, calories:52, protein:3, carbs: 1},
+        'parmesan':{unit: 'oz.', fat: 4, calories:52, protein:3, carbs: 1},
+        'butter':{unit: 'tbsp.', fat: 4, calories:52, protein:3, carbs: 1},
+        'carrots':{unit: 'lb.', fat: 4, calories:52, protein:3, carbs: 1},
+        'onions':{unit: 'lb.', fat: 4, calories:52, protein:3, carbs: 1},
+        'cheddar cheese':{unit: 'oz.', fat: 4, calories:52, protein:3, carbs: 1},
+        'oatmeal':{unit: 'cup', fat: 4, calories:52, protein:3, carbs: 1},
+        'brown sugar':{unit: 'tbsp', fat: 4, calories:52, protein:3, carbs: 1},
+        'celery':{unit: 'tbsp', fat: 4, calories:52, protein:3, carbs: 1},
+        'mayonanaise':{unit: 'tbsp', fat: 4, calories:52, protein:3, carbs: 1},
+        'mustard':{unit: 'tbsp', fat: 4, calories:52, protein:3, carbs: 1}
     };
     $('#add-ingredient').click(function(){
-        newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'cup'>cup</option></select></td></tr>"
+        newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td></tr>"
         $('#ingredients tr:last').after(newrow);
         helper();
     })
@@ -172,4 +185,5 @@ $(function() {
             }
         });
     }
+    console.log(recipe);
 })
