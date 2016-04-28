@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=ABeeZee");
+
 :root{
     --main-bg-color: #9adfe5;
     --secondary-bg-color: #d6f2f5;
@@ -29,6 +31,7 @@ body{
     vertical-align: bottom;
     padding: none;
     margin: none;
+    font-family: 'ABeeZee', sans-serif;
 }
 
 #logo:hover{
@@ -166,6 +169,7 @@ svg{
     border-collapse: collapse;
     table-layout: fixed;
     border: 1px solid gray;
+    color: var(--main-text-color);
 
 }
 
@@ -173,25 +177,45 @@ svg{
     border: 1px solid gray;
 }
 
-.calendar tr td:nth-child(odd)
+#breakfast td:nth-child(odd)
 {
     background: #FFFFFF;
 }
 
-.calendar tr td:nth-child(even)
+#breakfast td:nth-child(even)
+{
+    background: #F0F0F0;
+}#lunch td:nth-child(odd)
+{
+    background: #FFFFFF;
+}
+
+#lunch td:nth-child(even)
 {
     background: #F0F0F0;
 }
 
+#dinner td:nth-child(odd)
+{
+    background: #FFFFFF;
+}
 
-#dates{
-    background-color: #FFFFFF;
-    color: #000000;
+#dinner td:nth-child(even)
+{
+    background: #F0F0F0;
+}
+
+.calendar-header > td{
+    background-color: var(--secondary-bg-color);
+}
+
+#dates > td{
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
     font-size: 16pt;
 }
 
 .calendar-header{
-    background-color: #03A9F4;
     font-size: 14pt;
     font-style: italic;
 }
@@ -326,7 +350,6 @@ svg{
 
 #profile-first-row{
     font-size: 16pt;
-    margin: auto;
 }
 #Jimbob-calorie-source {
     float: left;
@@ -339,7 +362,12 @@ svg{
 }
 
 #calorie-table{
+    float: left;
     margin: 20px;
+}
+
+#calorie-table th,td{
+    padding: 10px;
 }
 
 #profile-second-row{
@@ -494,5 +522,11 @@ table#protein_table th {
 }
 
 #mealEntryLogo {
-    display: inline;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    font-size: 32pt;
+    text-align: center;
+    margin: 30px;
 }
