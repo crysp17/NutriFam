@@ -58,16 +58,16 @@
             <input type = 'checkbox' class = 'recipe-check' value = 'lunch'>Lunch</input>
             <input type = 'checkbox' class = 'recipe-check' value = 'dinner'>Dinner</input>
         </div>
-        <div><b>Servings: </b><input style = 'width: 60px' type = 'number' id = 'recipe-servings'></input></div>
+        <div><b>Servings: </b><input style = 'width: 60px' type = 'number' min = '1' step = '1' id = 'recipe-servings'></input></div>
         <div><b>Time Length: </b>
-            <input style = 'width: 60px' type = 'number' id = 'recipe-hours'></input> Hr.
-            <input style = 'width: 60px' type = 'number' id = 'recipe-minutes'></input> Min.
+            <input style = 'width: 60px' type = 'number' min = '0' step = '1' id = 'recipe-hours'></input> Hr.
+            <input style = 'width: 60px' type = 'number' min = '0' max = '59' step = '1' id = 'recipe-minutes'></input> Min.
         </div>
         <div><b>Ingredients: </b>
             <table id = 'ingredients'>
                 <tr id = 'ingredients-header'>
                     <td>Item</td>
-                    <td>Amount</td>
+                    <td>Qty</td>
                     <td>Unit</td>
                 </tr>
                 <tr class = 'ingredient'>
