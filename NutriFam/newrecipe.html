@@ -41,12 +41,12 @@
                 <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
             </span>
             <ul class="dropdown-menu">
-                <li><a href="#">Joanne</a></li>
+                <li><a href="joanne.html">Joanne</a></li>
                 <li><a href="jimbob.html">Jimbob</a></li>
-                <li><a href="#">Matthew</a></li>
-                <li><a href="#">Mark</a></li>
-                <li><a href="#">Luke</a></li>
-                <li><a href="#">John</a></li>
+                <li><a href="matthew.html">Matthew</a></li>
+                <li><a href="mark.html">Mark</a></li>
+                <li><a href="luke.html">Luke</a></li>
+                <li><a href="john.html">John</a></li>
             </ul>
         </li>    </ul>
 </div>
@@ -58,16 +58,16 @@
             <input type = 'checkbox' class = 'recipe-check' value = 'lunch'>Lunch</input>
             <input type = 'checkbox' class = 'recipe-check' value = 'dinner'>Dinner</input>
         </div>
-        <div><b>Servings: </b><input style = 'width: 60px' type = 'number' id = 'recipe-servings'></input></div>
+        <div><b>Servings: </b><input style = 'width: 60px' type = 'number' min = '1' step = '1' id = 'recipe-servings'></input></div>
         <div><b>Time Length: </b>
-            <input style = 'width: 60px' type = 'number' id = 'recipe-hours'></input> Hr.
-            <input style = 'width: 60px' type = 'number' id = 'recipe-minutes'></input> Min.
+            <input style = 'width: 60px' type = 'number' min = '0' step = '1' id = 'recipe-hours'></input> Hr.
+            <input style = 'width: 60px' type = 'number' min = '0' max = '59' step = '1' id = 'recipe-minutes'></input> Min.
         </div>
         <div><b>Ingredients: </b>
             <table id = 'ingredients'>
                 <tr id = 'ingredients-header'>
                     <td>Item</td>
-                    <td>Amount</td>
+                    <td>Qty</td>
                     <td>Unit</td>
                 </tr>
                 <tr class = 'ingredient'>
@@ -79,6 +79,7 @@
                         <select class = 'in-unit'>
                             <option value = "lb.">lb.</option>
                             <option value = "oz.">oz.</option>
+                            <option value = "tbsp.">tbsp.</option>
                             <option value = "cup">cup</option>
                         </select>
                     </td>

@@ -16,6 +16,10 @@ body{
 #header{
     background-color: var(--main-bg-color);
 }
+.page-header{
+    size: 24pt;
+}
+
 #logo{
     padding: 0;
     border: 0;
@@ -134,6 +138,7 @@ body{
     right:0;
     width:80%;
     padding: 50px;
+    color: var(--main-text-color);
 }
 
 #famprof ul{
@@ -287,7 +292,7 @@ svg{
 
 #ingredients{
     margin: 5px;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 #ingredients th,td{
@@ -314,11 +319,17 @@ svg{
 }
 
 #add-ingredient, #add-direction, #add-meal{
-    background: linear-gradient(#d8eff3,#addce6);
+    background: var(--accent-bg-color);
+    color: var(--accent-text-color);
     border-radius: 10px;
     border:none;
 }
+
+#add-meal{
+    font-size: 16pt;
+}
 #save-recipe, #go-back{
+    font-size: 16pt;
     color: var(--accent-text-color);
     background: var(--accent-bg-color);
     border-radius: 10px;
@@ -342,9 +353,7 @@ svg{
     font-size: 22pt;
 }
 
-#rec-book-header button{
-    position: absolute;
-    right: 0;
+#rec-book-footer button{
     background: var(--accent-bg-color);
     border-radius: 10px;
     border:none;
@@ -352,12 +361,12 @@ svg{
     font-size: 18pt;
     margin: 0px 50px;
     width: 200px;
-    color: WhiteSmoke;
+    color: var(--accent-text-color);
 }
 
 
 .in-amt{
-    width: 80px;
+    width: 70px;
 }
 
 .in-item{
@@ -365,7 +374,7 @@ svg{
 }
 .in-unit{
     height: 100%;
-    width: 80px;
+    width: 70px;
 }
 #nutr-header{
     text-align: center;
@@ -573,6 +582,7 @@ table#protein_table th {
     margin: 30px;
 }
 
+<<<<<<< HEAD
 #settings-top{
     font-size: 25pt;
     text-align: center;
@@ -628,3 +638,8 @@ table#protein_table th {
 .in-goaltype{
     width: 100px;
 }
+
+#rec-book-footer {
+    text-align: center;
+}
+

@@ -41,12 +41,12 @@
                 <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
             </span>
             <ul class="dropdown-menu">
-                <li><a href="#">Joanne</a></li>
+                <li><a href="joanne.html">Joanne</a></li>
                 <li><a href="jimbob.html">Jimbob</a></li>
-                <li><a href="#">Matthew</a></li>
-                <li><a href="#">Mark</a></li>
-                <li><a href="#">Luke</a></li>
-                <li><a href="#">John</a></li>
+                <li><a href="matthew.html">Matthew</a></li>
+                <li><a href="mark.html">Mark</a></li>
+                <li><a href="luke.html">Luke</a></li>
+                <li><a href="john.html">John</a></li>
             </ul>
         </li>
     </ul>
@@ -110,28 +110,7 @@
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script>
-    $(function() {
-        var data = [25*9, 52*4, 32*4];
-        var colors = ['CornflowerBlue', '#b4f49f', 'Salmon'];
-        var width = 200;
-        var svg = d3.select('#cal-pie')
-            .append('svg')
-            .attr('width', width)
-            .attr('height', width)
-            .append('g')
-            .attr('transform', 'translate('+(width/2)+','+(width/2)+')')
-        var arc = d3.svg.arc().outerRadius(width/2);
-        var pie = d3.layout.pie().value(function(d){return d;}).sort(null);
-        var path = svg.selectAll('path')
-            .data(pie(data))
-            .enter()
-            .append('path')
-            .attr('d', arc)
-            .attr('fill', function(d, i){return colors[i];});
-    })
-
-</script>
+<script type="text/javascript" src="recipe.js"></script>
 
 </body>
 
