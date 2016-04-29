@@ -16,10 +16,11 @@ $(function() {
         'onions':{unit: 'cup', fat: 0, calories: 68, protein: 1, carbs: 16},
         'cheddar cheese':{unit: 'oz.', fat: 9, calories: 113, protein: 7, carbs: 1},
         'oatmeal':{unit: 'cup', fat: 5, calories: 293, protein: 12, carbs: 50},
-        'brown sugar':{unit: 'tbsp', fat: 0, calories: 54, protein: 0, carbs: 13.5},
+        'brown sugar':{unit: 'tbsp.', fat: 0, calories: 54, protein: 0, carbs: 13.5},
         'celery':{unit: 'oz.', fat: 0, calories: 4, protein: 0, carbs: 1},
-        'mayonanaise':{unit: 'tbsp', fat: 5, calories: 59, protein:0, carbs: 3.5},
-        'mustard':{unit: 'tbsp', fat: 0, calories:8, protein:1, carbs: 1}
+        'mayonanaise':{unit: 'tbsp.', fat: 5, calories: 59, protein:0, carbs: 3.5},
+        'mustard':{unit: 'tbsp.', fat: 0, calories: 8, protein:1, carbs: 1},
+        'potato':{unit: 'lb.', fat: 0, calories: 368, protein:10, carbs: 82}
     };
     $('#add-ingredient').click(function(){
         newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td></tr>"
@@ -177,7 +178,10 @@ $(function() {
         }
         $('.ingredient').each(function(i,e){
             var item = $(this).find('.in-item').val();
-            var amt = parseInt($(this).find('.in-amt').val());
+            var amt = parseFloat($(this).find('.in-amt').val());
+            if (isNaN(amt)){
+                amt = 0;
+            }
             if (item in nutrition){
                 cal += nutrition[item].calories * amt;
                 fat += nutrition[item].fat * amt;
