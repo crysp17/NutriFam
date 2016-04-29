@@ -49,6 +49,38 @@ body{
     width:450px;
     text-align: center;
     color: var(--main-text-color);
+    display: inline-block;
+}
+#user{
+    float: right; 
+    margin-top: 20px; 
+    margin-right: 60px;
+    margin-left: 250px;
+
+    font-size: 20pt;
+    /*border: 1px;*/
+    /*border-radius: 10px;*/
+    /*border-color: var(--main-text-color);*/
+    /*border-style: solid;*/
+    padding: 5px;
+    text-align: center;
+    /*color: var(--main-text-color);*/
+    /*background-color: #F0F0F0*/
+}
+
+#usersite{
+    color: var(--main-text-color);
+}
+#usersite:after{
+    color: var(--main-text-color);
+    vertical-align: bottom;
+    padding: none;
+    margin: none;
+    font-family: 'ABeeZee', sans-serif;
+}
+
+#usersite:hover{
+    text-decoration: none;
 }
 
 #sidebar{
@@ -261,6 +293,16 @@ svg{
 #ingredients th,td{
     padding: 5px;
 }
+
+#settings{
+    margin: 5px;
+    margin-left: 25px;
+}
+
+#settings th,td{
+    padding: 4px;
+}
+
 #directions{
     padding-left: 30px;
 }
@@ -529,4 +571,60 @@ table#protein_table th {
     font-size: 32pt;
     text-align: center;
     margin: 30px;
+}
+
+#settings-top{
+    font-size: 25pt;
+    text-align: center;
+}
+#settings-table{
+    margin-left: 0px;
+}
+#settings-header{
+    font-size: 16pt;
+}
+#settings-header-2{
+    font-size: 14pt;
+}
+#settings td{
+    border-right: solid 1px #F0F0F0; 
+}
+#currentMembers, #newMembers{
+    font-size: 18pt;
+}
+#tinyLogo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 12pt;
+    text-align: center;
+    margin-right: 5px;
+}
+#add-member{
+    background: linear-gradient(#d8eff3,#addce6);
+    border-radius: 10px;
+    border:none;
+}
+
+.in-name{
+    width: 140px;
+}
+.in-age, .in-height, .in-weight{
+    width: 40px;
+}
+.in-gender{
+    width: 100px;
+}
+.in-activity{
+    width: 100px;
+}
+.in-goalcheck{
+    
+}
+.in-goalgrad{
+    width: 100px;
+}
+.in-goaltype{
+    width: 100px;
 }

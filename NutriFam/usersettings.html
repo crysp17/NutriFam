@@ -57,126 +57,131 @@
 <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="main.css" />
 
-<!-- Sarah's derpy stuff goes here -->
+<!-- User settings main content -->
 <div id = 'main'>
-    <div id = 'profile-top-stuff'>
-        <div id = 'profile-header-picture'>
-            <img src="images/blank_profile_pic.png" style="width:280px;height:280px;">
+    <span id='settings-top' style='margin-left: 26%'><b>Your Family Members</b></span>
+    <div>
+            <table id = 'settings-table'>
+                <tr id = 'settings-header'>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                    <td>Activity Level</td>
+                    <td>Height</td>
+                    <td>Weight</td>
+                    <td>Goal</td>
+                </tr>
+                <tr class = 'currentMembers' style = 'font-size: 16px;'>
+                    <td><span id = 'tinyLogo' style = 'background-color: #ffcccc'>Jo</span>Joanne</td>
+                    <td>40</td>
+                    <td>Female</td>
+                    <td>Moderate</td>
+                    <td>5' 6"</td>
+                    <td>130</td>
+                    <td>Lower Weight</td>
+                </tr>
+                <tr class = 'currentMembers' style = 'font-size: 16px;'>
+                    <td><span id = 'tinyLogo' style = 'background-color: #ffedcc;'>Ji</span>Jimbob</td>
+                    <td>43</td>
+                    <td>Male</td>
+                    <td>Sedentary</td>
+                    <td>5' 10"</td>
+                    <td>210</td>
+                    <td>Lower Cholesterol</td>
+                </tr>
+                <tr class = 'currentMembers' style = 'font-size: 16px;'>
+                    <td><span id = 'tinyLogo' style = 'background-color: #ffffcc'>Mt</span>Matthew</td>
+                    <td>15</td>
+                    <td>Male</td>
+                    <td>Moderate</td>
+                    <td>5' 7"</td>
+                    <td>145</td>
+                    <td>Maintain Happiness</td>
+                </tr>
+                <tr class = 'currentMembers' style = 'font-size: 16px;'>
+                    <td><span id = 'tinyLogo' style = 'background-color: #cce5cc'>Mr</span>Mark</td>
+                    <td>10</td>
+                    <td>Male</td>
+                    <td>Very Active</td>
+                    <td>5' 0"</td>
+                    <td>91</td>
+                    <td>Lower Sugar</td>
+                </tr>
+                <tr class = 'currentMembers' style = 'font-size: 16px;'>
+                    <td><span id = 'tinyLogo' style = 'background-color: #e5e5ff'>L</span>Luke</td>
+                    <td>9</td>
+                    <td>Male</td>
+                    <td>Very Active</td>
+                    <td>5' 10"</td>
+                    <td>82</td>
+                    <td>Lower Sugar</td>
+                </tr>
+                <tr class = 'currentMembers' style = 'font-size: 16px;'>
+                    <td><span id = 'tinyLogo' style = 'background-color: #e5cce5'>Jh</span>John</td>
+                    <td>3</td>
+                    <td>Male</td>
+                    <td>Moderate</td>
+                    <td>2' 4"</td>
+                    <td>45</td>
+                    <td>Increase Weight</td>
+                </tr>
+
+                <tr>
+                      <td colspan="8"><hr/></td>
+                </tr>
+
+                <tr id = 'settings-header-2'>
+                    <td>Name</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                    <td>Activity Level</td>
+                    <td>Height</td>
+                    <td>Weight</td>
+                    <td>Goal</td>
+                </tr>
+
+                <tr class = 'newMember'>
+                    <td><input class = 'in-name'></input></td>
+                    <td>
+                        <input type = 'number' class = 'in-age'></input> 
+                    </td>
+                    <td>
+                        <select class = 'in-gender'>
+                            <option value = "Male">Male</option>
+                            <option value = "Female">Female</option>
+                            <option value = "Other">Other</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class = 'in-activity'>
+                            <option value = "Light">Sedentary</option>
+                            <option value = "Moderate">Moderate</option>
+                            <option value = "Very">Very Active</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type = 'number' class = 'in-height'></input> 
+                    </td>
+                    <td>
+                        <input type = 'number' class = 'in-weight'></input> 
+                    </td>
+                    <td>
+                        <input type = 'checkbox' class = 'in-goalcheck'></input>
+                        <select class = 'in-goalgrad'>
+                            <option value = "Lower">Lower</option>
+                            <option value = "Maintain">Maintain</option>
+                            <option value = "Increase">Increase</option>
+                        </select>
+                        <select class = 'in-goaltype'>
+                            <option value = "Weight">Weight</option>
+                            <option value = "Cholesterol">Cholesterol</option>
+                            <option value = "Mineral">Specific Mineral</option>
+                        </select>
+                    </td>
+                </tr>
+              </table>
+              <button id = 'add-member' style = 'width: 200px; margin-left:70px;'>+</button>
         </div>
-        <div id = 'profile-header-info'>
-            <h1 style="float:left;font-weight:bold">Jimbob's Nutrition Report</h1>
-            <h1 style="float:right;border:solid;padding:5px;border-width:2px">04/11/2016<h1>
-            <br><br>
-            <h2> Goal: Lower cholesterol and lose 5 lbs in 2 months. </h2>
-            <h2>Progress: In 1 month, Jimbob has lost 1 lb. Jimbob has not entered any new cholesterol measurements. He is currently at HDL = 50 mg/dL, LDL = 100 mg/dL.</h2>
-        </div>
-    </div>
-    <div id = 'profile-bottom-stuff'>
-        <div id = 'profile-first-row'>
-            <div id = 'Jimbob-calorie-source'>
-                <h3>Calorie Source<br><u>Breakdown</u></h3>
-                <h4> Carbs: 50.4%</h4>
-                <h4> Fat: 34.7%</h4>
-                <h4> Protein: 14.9%</h4>
-            </div>
-            <div id = 'Jimbobpie'></div>
-            <table id="calorie-table">
-              <tr>
-                <th colspan="3">Calories: 2262 kcal consumed</th>
-              </tr>
-              <tr>
-                <td>Fat:</td>
-                <td>78.9g</td> 
-                <td>507%</td>
-              </tr>
-              <tr>
-                <td>Protein:</td>
-                <td>86.7g</td> 
-                <td>248%</td>
-              </tr>
-              <tr>
-                <td>Cholesterol:</td>
-                <td>177.9mg</td> 
-                <td></td>
-              </tr>
-              <tr>
-                <td>Sodium:</td>
-                <td>4492.8mg</td> 
-                <td>300%</td>
-              </tr>
-              <tr>
-                <td>Carbs:</td>
-                <td>275.3g</td> 
-                <td>44%</td>
-              </tr>
-            </table>
-        </div>
-        <div id = 'profile-second-row'>
-            <div id="vitamin_chart" style="float:left;display:block;width:50%;margin-top:20px;"></div>
-            <div id="mineral_chart" style="float:left;display:block;width:50%;margin-top:20px;"></div>
-        </div>
-        <div id = 'profile-third-row'>
-            <div style="float:left;padding-left:80px;margin-top:10px;">
-                <table id="lipid_table">
-                  <tr>
-                    <th colspan="2">Lipids:</th>
-                  </tr>
-                  <tr>
-                    <td>Fat:</td>
-                    <td>78.9g (121%)</td>
-                  </tr>
-                  <tr>
-                    <td style="padding-left:40px">Monosaturated:</td>
-                    <td>86.7g</td> 
-                  </tr>
-                  <tr>
-                    <td style="padding-left:40px">Polyunsaturated:</td>
-                    <td>177.9mg</td> 
-                  </tr>
-                  <tr>
-                    <td style="padding-left:60px">Omega-3:</td>
-                    <td>4492.8mg</td> 
-                  </tr>
-                  <tr>
-                    <td style="padding-left:60px">Omega-6:</td>
-                    <td>275.3g</td> 
-                  </tr>
-                  <tr>
-                    <td style="padding-left:40px">Saturated:</td>
-                    <td>275.3g</td> 
-                  </tr>
-                  <tr>
-                    <td style="padding-left:40px">Trans-Fats:</td>
-                    <td>275.3g</td> 
-                  </tr>
-                  <tr>
-                    <td>Cholesterol:</td>
-                    <td>275.3g</td> 
-                  </tr>
-                </table>
-            </div>
-            <div style="float:right;padding-right:135px;margin-top:10px;">
-                <table id="protein_table">
-                  <tr>
-                    <th>Proteins:</th>
-                    <th>86.7g (188%)</th>
-                  </tr>
-                  <tr>
-                    <td>Cystine:</td>
-                    <td>0.8g</td> 
-                  </tr>
-                  <tr>
-                    <td>Histidine:</td>
-                    <td>1.3g</td> 
-                  </tr>
-                  <tr>
-                    <td>Lysine:</td>
-                    <td>2.6g</td> 
-                  </tr>
-                </table>
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- Load any supplemental Javascript libraries here -->
