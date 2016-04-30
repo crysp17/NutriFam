@@ -1,5 +1,6 @@
 $(function() {
     var recipes = JSON.parse(sessionStorage.recipes);
+    var currRec = recipes[sessionStorage.recipe];
     var nutr = {fat: 0, carbs: 0, protein: 0}
     var nutrition = {
         'ground beef':{unit: 'lb.', fat: 68, calories: 975, protein: 84, carbs: 0},
@@ -22,6 +23,33 @@ $(function() {
         'mustard':{unit: 'tbsp.', fat: 0, calories: 8, protein:1, carbs: 1},
         'potato':{unit: 'lb.', fat: 0, calories: 368, protein:10, carbs: 82}
     };
+
+    $('#recipe-title').val(currRec.title);
+    $('#recipe-servings').val(currRec.servings);
+    var currCat = currRec.categories;
+    for (var i = 0; i < currCat.length; i++){
+        $('input:checkbox[value='+currCat[i]+']').attr('checked',true);
+    }
+    var currTime = currRec.time;
+    $('#recipe-hours').val(currTime[0]);
+    $('#recipe-minutes').val(currTime[1]);
+    var currDir = currRec.directions;
+    for (var i  = 0; i < currDir.length; i++){
+        var newlist = "<li><textarea class = 'direction'>"+currDir[i]+"</textarea><button class = 'del-button'>x</button></li>";
+        $('#directions').append(newlist);
+    }
+    var currIng = currRec.ingredients;
+    for (var i  = 0; i < currIng.length; i++){
+        var ci = currIng[i];
+        var newrow = "<tr class = 'ingredient'><td><input class = 'in-item' value="+ci.item+"></input></td><td><input type = 'number' class = 'in-amt' value = "+ci.amount+"></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td><td><button class = 'del-button'>x</button></td></tr>"
+        $('#ingredients tr:last').after(newrow);
+        var u = $('#ingredients tr:last').find('.in-unit');
+        u.val(ci.unit);
+        if (ci.item in nutrition){
+            u.prop('disabled',true);
+        }
+    }
+
     $('#add-ingredient').click(function(){
         var newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td><td><button class = 'del-button'>x</button></td></tr>"
         $('#ingredients tr:last').after(newrow);
@@ -45,6 +73,9 @@ $(function() {
 
         })
     }
+    $('#cancel-recipe').click(function(){
+        window.location.href = 'recipebook.html'
+    })
     $('#save-recipe').click(function(){
         var recipe = {};
         recipe.title = $('#recipe-title').val();
@@ -69,7 +100,8 @@ $(function() {
             recipe.directions.push($(this).val());
         })
         recipe.nutrition = nutr;
-        recipes[recipe.title] = recipe;
+        delete recipes[sessionStorage.recipe];
+        recipes[recipe.title] =recipe;
         sessionStorage.recipes = JSON.stringify(recipes);
         sessionStorage.recipe = recipe.title;
         window.location.href = "recipe.html";
@@ -238,4 +270,5 @@ $(function() {
     }
     deleteButton();
     helper();
+    updateGraph();
 })
