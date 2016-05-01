@@ -53,49 +53,44 @@
 </div>
 <div id = 'main'>
     <div id = 'recipe-input'>
-        <div><b>Title: </b> Lasagna </div>
+        <div><b>Title: </b><span id = 'recipe-title'></span></div>
         <div><b>Category: </b>
-            Lunch, Dinner
+            <span id = 'recipe-categories'></span>
         </div>
-        <div><b>Servings: </b>8</div>
+        <div><b>Servings: </b><span id = 'recipe-servings'></span></div>
         <div><b>Time Length: </b>
-            1 Hr. 15 Min.
+            <span id = 'recipe-hours'></span> Hr. <span id = 'recipe-minutes'></span> Min.
         </div>
         <div><b>Ingredients: </b>
             <ul id = 'ingredients-list'>
-                <li>1 lb. lasagna noodles</li>
-                <li>4 cups tomato sauce</li>
-                <li>1 lb. ground beef</li>
-                <li>15 oz. ricotta</li>
-                <li>10 oz. mozzarella</li>
             </ul>
         </div>
         <div><b>Directions: </b>
             <ol id = 'directions-list'>
-                <li>Preheat oven to 350 degrees.</li>
-                <li> Cook beef in a large skillet over medium heat. Stir in pasta sauce.</li>
-                <li>Layer meat sauce, lasagna noodles, and cheese in a baking dish.</li>
-                <li> Bake for 45 minutes.</li>
             </ol>
 
+        </div>
+        <div id = 'recipe-buttons'>
+            <button id = 'edit-recipe'>Edit Recipe</button>
+            <button id = 'del-recipe'>Delete Recipe</button>
         </div>
     </div>
     <div id = 'nutrition-display'>
         <div id = 'nutr-header'>Nutrition Per Serving</div>
         <div id = 'calories'>
-            <b>Calories: </b>555
+            <b>Calories: </b><span id = 'recipe-cal'></span>
         </div>
         <div id = 'fat'>
             <div style = 'display: inline-block; height: 18px; width: 18px; background-color:CornflowerBlue;'></div>
-            <b>Fat: </b>25 g.
+            <b>Fat: </b><span id = 'recipe-fat'></span> g.
         </div>
         <div id = 'carbs'>
             <div style = 'display: inline-block; height: 18px; width: 18px; background-color:#b4f49f;'></div>
-            <b>Carbs: </b>52 g.
+            <b>Carbs: </b><span id = 'recipe-carbs'></span> g.
         </div>
         <div id = 'protein'>
             <div style = 'display: inline-block; height: 18px; width: 18px; background-color:Salmon;'></div>
-            <b>Protein: </b>32 g.
+            <b>Protein: </b><span id = 'recipe-prot'></span> g.
         </div>
         <div id= 'cal-pie'>
     </div> 
@@ -110,28 +105,7 @@
   <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script>
-    $(function() {
-        var data = [25*9, 52*4, 32*4];
-        var colors = ['CornflowerBlue', '#b4f49f', 'Salmon'];
-        var width = 200;
-        var svg = d3.select('#cal-pie')
-            .append('svg')
-            .attr('width', width)
-            .attr('height', width)
-            .append('g')
-            .attr('transform', 'translate('+(width/2)+','+(width/2)+')')
-        var arc = d3.svg.arc().outerRadius(width/2);
-        var pie = d3.layout.pie().value(function(d){return d;}).sort(null);
-        var path = svg.selectAll('path')
-            .data(pie(data))
-            .enter()
-            .append('path')
-            .attr('d', arc)
-            .attr('fill', function(d, i){return colors[i];});
-    })
-
-</script>
+<script type="text/javascript" src="recipe.js"></script>
 
 </body>
 

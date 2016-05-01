@@ -16,44 +16,113 @@ body{
 #header{
     background-color: var(--main-bg-color);
 }
-#logo{
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    border: 0;
-    width: 200px;
-}
-#logo:img{
-    width: 200px;
-}
-#logo:after{
-    content: "NutriFam";
-    font-size: 87px;
-    color: var(--main-text-color);
-    vertical-align: bottom;
-    padding: none;
-    margin: none;
-    font-family: 'ABeeZee', sans-serif;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
 }
 
-#logo:hover{
+nav li {
+    float: left;
+    position: absolute;
+    left: -3%;
+    vertical-align: top;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-#dailytip{
-    font-size: 14pt;
+nav li a:hover:not(.active) {
+    background-color: var(--main-bg-color);
+}
+
+nav #right {
+    float: right !important;
+    position: relative;
+    margin-top: 34px; 
+    margin-bottom: 34px; 
+}
+nav #center {
+    float: left;
+    position: relative;
+    left: 40%;
+}
+nav li #dailytip {
+    font-size: 120%;
     border: 1px;
     border-radius: 10px;
     border-color: var(--main-text-color);
     border-style: solid;
-    padding: 5px;
-    margin: 5px 50px;
-    width:450px;
+    padding: 0.3%;
+    margin: 0.6% 3%;
+    width: 60%;
     text-align: center;
     color: var(--main-text-color);
+    display: inline-block;
 }
 
+#logo{
+}
+#logo img{
+    width: 22%;
+}
+img {
+    vertical-align: top;
+    margin-top: -10px;
+}
+#logo:after{
+    display: inline-block;
+    overflow: hidden;
+    content: "NutriFam";
+    font-size: 520%;
+    color: var(--main-text-color);
+    font-family: 'ABeeZee', sans-serif;
+}
+#logo:hover{
+    text-decoration: none;
+}
+
+#user-top {
+    display: inline;
+}
+#user-bottom {
+    display: inline;
+    padding-left: 7px;
+}
+
+#usersite{
+    color: var(--main-text-color);
+    font-size: 130%;
+}
+#usersite:hover{
+    text-decoration: none;
+}
+
+@media all and (max-width: 1100px)  {
+  #center {
+    display: none !important;
+  }
+}
+
+
+.container { 
+  overflow: hidden; 
+} 
 #sidebar{
+    margin-bottom: -1000px;
+    padding-bottom: 1000px; 
+
     position:absolute;
-    top: 126px; 
+    top: 120.5px; 
     bottom:0; 
     left:0;
     background-color: var(--secondary-bg-color);
@@ -102,6 +171,7 @@ body{
     right:0;
     width:80%;
     padding: 50px;
+    color: var(--main-text-color);
 }
 
 #famprof ul{
@@ -230,7 +300,7 @@ svg{
 
 #recipe-input{
     border: 1px solid gray;
-    width: 535px;
+    width: 550px;
     font-size: 16pt;
     padding: 10px;
 }
@@ -255,12 +325,22 @@ svg{
 
 #ingredients{
     margin: 5px;
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
 #ingredients th,td{
     padding: 5px;
 }
+
+#settings{
+    margin: 5px;
+    margin-left: 25px;
+}
+
+#settings th,td{
+    padding: 4px;
+}
+
 #directions{
     padding-left: 30px;
 }
@@ -272,18 +352,34 @@ svg{
 }
 
 #add-ingredient, #add-direction, #add-meal{
-    background: linear-gradient(#d8eff3,#addce6);
+    background: var(--accent-bg-color);
+    color: var(--accent-text-color);
     border-radius: 10px;
     border:none;
 }
-#save-recipe, #go-back{
+
+#add-meal{
+    font-size: 16pt;
+}
+#save-recipe, #cancel-recipe{
+    font-size: 16pt;
+    color: var(--accent-text-color);
+    background: var(--accent-bg-color);
+    border-radius: 10px;
+    border:none;
+    padding: 10px 30px;
+    margin: 10px;
+}
+
+#go-back{
+    font-size: 16pt;
     color: var(--accent-text-color);
     background: var(--accent-bg-color);
     border-radius: 10px;
     border:none;
     padding: 10px;
     width: 250px;
-    margin: 10px 122px;
+    margin: 10px;
 }
 
 #save-recipe-to-calendar
@@ -300,9 +396,7 @@ svg{
     font-size: 22pt;
 }
 
-#rec-book-header button{
-    position: absolute;
-    right: 0;
+#rec-book-footer button{
     background: var(--accent-bg-color);
     border-radius: 10px;
     border:none;
@@ -310,12 +404,12 @@ svg{
     font-size: 18pt;
     margin: 0px 50px;
     width: 200px;
-    color: WhiteSmoke;
+    color: var(--accent-text-color);
 }
 
 
 .in-amt{
-    width: 80px;
+    width: 70px;
 }
 
 .in-item{
@@ -323,7 +417,7 @@ svg{
 }
 .in-unit{
     height: 100%;
-    width: 80px;
+    width: 70px;
 }
 #nutr-header{
     text-align: center;
@@ -529,4 +623,88 @@ table#protein_table th {
     font-size: 32pt;
     text-align: center;
     margin: 30px;
+}
+
+#settings-top{
+    font-size: 25pt;
+    text-align: center;
+}
+#settings-table{
+    margin-left: 0px;
+}
+#settings-header{
+    font-size: 16pt;
+}
+#settings-header-2{
+    font-size: 14pt;
+}
+#settings td{
+    border-right: solid 1px #F0F0F0; 
+}
+#currentMembers, #newMembers{
+    font-size: 18pt;
+}
+#tinyLogo {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 12pt;
+    text-align: center;
+    margin-right: 5px;
+}
+#add-member{
+    background: linear-gradient(#d8eff3,#addce6);
+    border-radius: 10px;
+    border:none;
+}
+
+.in-name{
+    width: 140px;
+}
+.in-age, .in-height, .in-weight{
+    width: 40px;
+}
+.in-gender{
+    width: 100px;
+}
+.in-activity{
+    width: 100px;
+}
+.in-goalcheck{
+    
+}
+.in-goalgrad{
+    width: 100px;
+}
+.in-goaltype{
+    width: 100px;
+}
+
+#rec-book-footer {
+    text-align: center;
+}
+#recipe-buttons{
+    text-align: center;
+}
+
+#recipe-buttons button{
+    margin: 10px;
+    font-size: 16pt;
+    padding: 10px 30px;
+    background: var(--accent-bg-color);
+    color: var(--accent-text-color);
+    border-radius: 10px;
+    border:none;
+}
+
+.del-button{
+    border: none;
+    background: none;
+    color: #aaa;
+}
+
+li .del-button{
+    margin-top: 20px;
+    margin-left:20px;
 }
