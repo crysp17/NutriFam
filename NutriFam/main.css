@@ -173,7 +173,7 @@ img {
 #sidebar{
     margin-bottom: -1000px;
     padding-bottom: 1000px; 
-    width:21.5%;
+    width:20.15%;
     position:absolute;
     top: 120.5px; 
     bottom:0; 
@@ -220,7 +220,7 @@ img {
 #main{
     position:absolute;
     top: 126px; 
-    left: 22%;
+    left: 21%;
     width:79%;
     padding: 3%;
     color: var(--main-text-color);
@@ -321,19 +321,19 @@ svg{
 #dates > td{
     background-color: var(--main-bg-color);
     color: var(--main-text-color);
-    font-size: 16pt;
+    font-size: 1.6vw;
 }
 
 .calendar-header{
-    font-size: 14pt;
+    font-size: 1.4vw;
     font-style: italic;
 }
 
 .fam{
     display: inline-block;
-    width:30px;
-    height: 30px;
-    border-radius: 15px;
+    width:30%;
+    line-height: 250%;
+    border-radius: 50%;
     margin: 0px 5px 5px;
 }
 
@@ -764,7 +764,7 @@ li .del-button{
 }
 
 #days-wrapper{
-    font-size: 22pt;
+    font-size: 2.2vw;
     text-align: center;
     margin: 10px;
 }
@@ -772,4 +772,8 @@ li .del-button{
 #days{
     display: inline-block;
     width: 400px;
+}
+
+.meal{
+    font-size: 1.0vw;
 }
