@@ -578,21 +578,20 @@ table#protein_table th {
     border-top: 9px solid;
 }
 
-#mealEntryWords {
+.mealEntryWords {
     float: right;
 }
 
-#mealEntryLogo {
+.mealEntryLogo {
     display: inline-block;
     width: 80px;
-    height: 80px;
+    line-height: 80px;
     border-radius: 40px;
     font-size: 32pt;
     text-align: center;
     margin: 30px;
 }
 
-<<<<<<< HEAD
 #settings-top{
     font-size: 25pt;
     text-align: center;
@@ -675,4 +674,21 @@ table#protein_table th {
 li .del-button{
     margin-top: 20px;
     margin-left:20px;
+}
+
+#left-days, #right-days{
+    background: none;
+    color: #aaa;
+    border: none;
+}
+
+#days-wrapper{
+    font-size: 22pt;
+    text-align: center;
+    margin: 10px;
+}
+
+#days{
+    display: inline-block;
+    width: 400px;
 }

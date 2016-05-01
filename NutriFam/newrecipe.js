@@ -45,6 +45,11 @@ $(function() {
 
         })
     }
+    $('body').on('click','a',function(){
+        var c = confirm("Do you want to leave without saving?");
+        return c;
+    })
+
     $('#save-recipe').click(function(){
         var recipe = {};
         recipe.title = $('#recipe-title').val();
@@ -202,7 +207,7 @@ $(function() {
             }
         })
         cal /= servings;
-        $('#cal-amt').text(cal.toFixed(2));
+        $('#cal-amt').text(cal.toFixed(0));
         fat /= servings;
         $('#fat-amt').text(fat.toFixed(2));
         carbs /= servings;
