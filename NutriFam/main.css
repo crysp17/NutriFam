@@ -56,7 +56,7 @@ nav #center {
     position: relative;
     left: 40%;
 }
-nav li #dailytip {
+nav li #dailytip{
     font-size: 120%;
     border: 1px;
     border-radius: 10px;
@@ -69,8 +69,62 @@ nav li #dailytip {
     color: var(--main-text-color);
     display: inline-block;
 }
+#reveal {
+    display: none;
+}
+.form-signin {
+  max-width: 30%;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-welcome,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin h2{
+    text-align: center;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+h5 { 
+    width:100%; 
+    text-align:center; 
+    border-bottom: 1px solid DimGray; 
+    line-height:0.1em; 
+    margin:30px 0 20px; 
+} 
+h5 span { 
+    background: white; 
+    padding:0 10px; 
+}
 
 #logo{
+    margin: 10px 0 0 0;
+    padding: 0; 
 }
 #logo img{
     width: 22%;
@@ -89,6 +143,7 @@ img {
 }
 #logo:hover{
     text-decoration: none;
+    overflow: hidden;
 }
 
 #user-top {
@@ -112,7 +167,6 @@ img {
     display: none !important;
   }
 }
-
 
 .container { 
   overflow: hidden; 
@@ -167,11 +221,16 @@ img {
 #main{
     position:absolute;
     top: 126px; 
-    bottom:0; 
-    right:0;
-    width:80%;
+    left: 300px;
+    width:79%;
     padding: 50px;
     color: var(--main-text-color);
+}
+
+@media all and (max-width: 1422px){
+    #mealEntryWords {
+        float: left !important;
+    }
 }
 
 #famprof ul{
@@ -184,7 +243,7 @@ img {
 }
 
 #famprof li{
-    padding: 3px 30px;
+    padding: 3px 20px;
 }
 
 #myCarousel{
@@ -197,7 +256,7 @@ img {
 .famday{
     font-size: 20pt;
     background-color: White;
-    padding: 50px;
+    padding: 25px;
     height: 100%;
     color: #666666;
 }
@@ -221,13 +280,24 @@ img {
 #dayHeader{
     display: block;
     font-size: 22pt;
-    text-align: center;
+    text-align: left;
     color: #666666;
     margin-bottom: 20px;
 }
 
-#entireFamilyMeals{
+@media all and (max-width: 1100px)  {
+  #dayHeader {
+    margin-right: 40px;
+  }
+}
+@media all and (max-width: 900px)  {
+  #dayHeader {
+    margin-right: 60px;
+  }
+}
 
+#entireFamilyMeals{
+    display: block;
 }
 
 svg{
@@ -460,7 +530,7 @@ svg{
     margin: 20px;
 }
 
-#calorie-table th,td{
+#calorie-table th, #calorie-table  td{
     padding: 10px;
 }
 
@@ -630,10 +700,11 @@ table#protein_table th {
     text-align: center;
 }
 #settings-table{
-    margin-left: 0px;
+    margin: auto;
 }
 #settings-header{
     font-size: 16pt;
+    color: DimGray;
 }
 #settings-header-2{
     font-size: 14pt;

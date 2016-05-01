@@ -31,7 +31,7 @@
     <ul class = nav nav-pills nav-stacked>
         <li> 
             <a href="index.html">
-                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Today's Eats
+                  <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Today's Eats
             </a> 
         </li>
         <li> 
@@ -50,7 +50,7 @@
             </span>
             <ul class="dropdown-menu">
                 <li><a href="#">Joanne</a></li>
-                <li id = 'sidebar-selected'><a href="jimbob.html">Jimbob</a></li>
+                <li><a href="jimbob.html">Jimbob</a></li>
                 <li><a href="#">Matthew</a></li>
                 <li><a href="#">Mark</a></li>
                 <li><a href="#">Luke</a></li>
@@ -59,80 +59,87 @@
         </li>
     </ul>
 </div>
-<div id = 'main'>
-</div>
-<!-- Load style sheets -->
-<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="main.css" />
-
 <!-- User settings main content -->
 <div id = 'main'>
     <span id='settings-top' style='margin-left: 26%'><b>Your Family Members</b></span>
+    <span class="glyphicon glyphicon-stroller"></span>
     <div>
             <table id = 'settings-table'>
                 <tr id = 'settings-header'>
                     <td>Name</td>
                     <td>Age</td>
                     <td>Gender</td>
+                    <td></td>
                     <td>Activity Level</td>
-                    <td>Height</td>
-                    <td>Weight</td>
+                    <td></td>
                     <td>Goal</td>
+                    <td>Weight</td>
                 </tr>
                 <tr class = 'currentMembers' style = 'font-size: 16px;'>
                     <td><span id = 'tinyLogo' style = 'background-color: #ffcccc'>Jo</span>Joanne</td>
                     <td>40</td>
                     <td>Female</td>
-                    <td>Moderate</td>
-                    <td>5' 6"</td>
-                    <td>130</td>
+                    <td><span class="glyphicon glyphicon-flash" aria-hidden="true" style = "float: right;"></span></td><td>Moderate</td>
+                    <td><span class="glyphicon glyphicon-scale" aria-hidden="true"></span></td>
                     <td>Lower Weight</td>
+                    <td>130</td>
                 </tr>
                 <tr class = 'currentMembers' style = 'font-size: 16px;'>
                     <td><span id = 'tinyLogo' style = 'background-color: #ffedcc;'>Ji</span>Jimbob</td>
                     <td>43</td>
                     <td>Male</td>
-                    <td>Sedentary</td>
-                    <td>5' 10"</td>
+                    <td></td><td>Sedentary</td>
+                    <td><span class="glyphicon glyphicon-scale" aria-hidden="true"></span></td>
+                    <td>Lower Weight, Lower Cholesterol</td>
                     <td>210</td>
-                    <td>Lower Cholesterol</td>
                 </tr>
                 <tr class = 'currentMembers' style = 'font-size: 16px;'>
                     <td><span id = 'tinyLogo' style = 'background-color: #ffffcc'>Mt</span>Matthew</td>
                     <td>15</td>
                     <td>Male</td>
-                    <td>Moderate</td>
-                    <td>5' 7"</td>
-                    <td>145</td>
+                    <td><span class="glyphicon glyphicon-flash" aria-hidden="true" style = "float: right;"></span></td><td>Moderate</td>
+                    <td><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span></td>
                     <td>Maintain Happiness</td>
+                    <td>145</td>
                 </tr>
                 <tr class = 'currentMembers' style = 'font-size: 16px;'>
                     <td><span id = 'tinyLogo' style = 'background-color: #cce5cc'>Mr</span>Mark</td>
                     <td>10</td>
                     <td>Male</td>
-                    <td>Very Active</td>
-                    <td>5' 0"</td>
-                    <td>91</td>
+                    <td><span class="glyphicon glyphicon-flash" aria-hidden="true"></span><span class="glyphicon glyphicon-flash" aria-hidden="true"></span></td><td>Very Active</td>
+                    <td><span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span></td>
                     <td>Lower Sugar</td>
+                    <td>91</td>
                 </tr>
                 <tr class = 'currentMembers' style = 'font-size: 16px;'>
                     <td><span id = 'tinyLogo' style = 'background-color: #e5e5ff'>L</span>Luke</td>
                     <td>9</td>
                     <td>Male</td>
-                    <td>Very Active</td>
-                    <td>5' 10"</td>
-                    <td>82</td>
+                    <td><span class="glyphicon glyphicon-flash" aria-hidden="true" style = "display: inline;"></span><span class="glyphicon glyphicon-flash" aria-hidden="true" style = "display: inline;"></span></td><td>Very Active</td>
+                    <td><span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></span></td>
                     <td>Lower Sugar</td>
+                    <td>82</td>
                 </tr>
                 <tr class = 'currentMembers' style = 'font-size: 16px;'>
                     <td><span id = 'tinyLogo' style = 'background-color: #e5cce5'>Jh</span>John</td>
                     <td>3</td>
                     <td>Male</td>
-                    <td>Moderate</td>
-                    <td>2' 4"</td>
-                    <td>45</td>
+                    <td><span class="glyphicon glyphicon-flash" aria-hidden="true" style = "float: right;"></span></td><td>Moderate</td>
+                    <td><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></td>
                     <td>Increase Weight</td>
+                    <td>45</td>
                 </tr>
+                <tr id = "new" class = 'currentMembers' style = 'font-size: 16px; display: none;'>
+                    <td id = "name"><span id = 'tinyLogo' style = 'background-color: var(--main-bg-color)'>NA</span>NAME</td>
+                    <td id = "age">AGE</td>
+                    <td id = "gender">GENDER</td>
+
+                    <td id = "flash"><span id = "active1" class="glyphicon glyphicon-flash" aria-hidden="true" style = "float: right;"><span id == "active2" class="glyphicon glyphicon-flash" aria-hidden="true" style = "float: right;"></span></td><td id = "activity">ACTIVITY</td>
+
+                    <td id = "cutlery"><span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span></td>
+                    <td id = "goal">GOAL</td>
+                    <td id = "wght">WEIGHT</td>
+                  </tr>
 
                 <tr>
                       <td colspan="8"><hr/></td>
@@ -142,10 +149,11 @@
                     <td>Name</td>
                     <td>Age</td>
                     <td>Gender</td>
+                    <td></td>
                     <td>Activity Level</td>
-                    <td>Height</td>
-                    <td>Weight</td>
+                    <td></td>
                     <td>Goal</td>
+                    <td>Weight</td>
                 </tr>
 
                 <tr class = 'newMember'>
@@ -160,6 +168,7 @@
                             <option value = "Other">Other</option>
                         </select>
                     </td>
+                    <td></td>
                     <td>
                         <select class = 'in-activity'>
                             <option value = "Light">Sedentary</option>
@@ -167,12 +176,7 @@
                             <option value = "Very">Very Active</option>
                         </select>
                     </td>
-                    <td>
-                        <input type = 'number' class = 'in-height'></input> 
-                    </td>
-                    <td>
-                        <input type = 'number' class = 'in-weight'></input> 
-                    </td>
+                    <td></td>
                     <td>
                         <input type = 'checkbox' class = 'in-goalcheck'></input>
                         <select class = 'in-goalgrad'>
@@ -186,79 +190,46 @@
                             <option value = "Mineral">Specific Mineral</option>
                         </select>
                     </td>
+                    <td>
+                        <input type = 'number' class = 'in-weight'></input> 
+                    </td>
                 </tr>
               </table>
-              <button id = 'add-member' style = 'width: 200px; margin-left:70px;'>+</button>
+              <button id = 'add-member' style = 'width: 200px; margin-left:70px;' onclick="addNew()">+</button>
         </div>
+
 </div>
+
+<script>
+function addNew(){
+  var name = $('.in-name').value
+  var age = $('.in-age').value
+  var gender = $('.in-gender').value
+  var activity= $('.in-activity').value
+  var goalSelected = $('.in-goalcheck').value
+  var goalGrad = $('.in-goalgrad').value 
+  var goalType = $('.in-goaltype').value  
+  var wght = $('.in-weight').value  
+
+
+  $('#new').css('display', 'table')
+
+
+};
+</script>
+
+<!-- Load style sheets -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css" />
+
 
 <!-- Load any supplemental Javascript libraries here -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script type="text/javascript" src="jimbob.js"></script>
+<script type="text/javascript" src="main.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-    google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawBasic);
-    function drawBasic() {
 
-        var vitamin_data = google.visualization.arrayToDataTable([
-          ['', '', ''],
-          ['B1', 100, 18],
-          ['B12', 97, 0],
-          ['A', 10, 0],
-          ['C', 27, 0]
-        ]);
 
-        var vitamin_options = {
-          title: 'Vitamins:',
-          width: 600,
-          height: 400,
-          chartArea: {width: '75%'},
-          hAxis: {
-            title: 'Daily Percentage Consumed',
-            minValue: 0,
-            ticks: [0, 25, 50, 75, 100, 125]
-          },
-          legend: 'none',
-          bar: {groupWidth: "90%"},
-          isStacked: true,
-          fontSize: 20
-        };
-
-        var vitamin_chart = new google.visualization.BarChart(document.getElementById('vitamin_chart'));
-
-        vitamin_chart.draw(vitamin_data, vitamin_options);
-
-        var mineral_data = google.visualization.arrayToDataTable([
-          ['', '', ''],
-          ['Calcium', 22, 0],
-          ['Iron', 63, 0],
-          ['Sodium', 100, 75],
-        ]);
-
-        var mineral_options = {
-          title: 'Minerals:',
-          width: 600,
-          height: 400,
-          chartArea: {width: '60%'},
-          hAxis: {
-            title: 'Daily Percentage Consumed',
-            minValue: 0,
-            ticks: [0, 50, 100, 150, 200]
-          },
-          legend: 'none',
-          bar: {groupWidth: "90%"},
-          isStacked: true,
-          fontSize: 20
-        };
-
-        var mineral_chart = new google.visualization.BarChart(document.getElementById('mineral_chart'));
-
-        mineral_chart.draw(mineral_data, mineral_options);
-    }
-</script>
 </body>
 
 </html>
