@@ -354,6 +354,12 @@ svg{
     padding: 10px;
 }
 
+@media all and (max-width: 1100px)  {
+  #nutrition-display {
+    display: none;
+  }
+}
+
 #recipe-input div{
     margin: 20px;
 }
