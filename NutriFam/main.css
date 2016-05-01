@@ -398,7 +398,8 @@ svg{
 }
 
 #add-meal{
-    font-size: 16pt;
+    font-size: 1.6vw;
+    width: 6%;
 }
 #save-recipe, #cancel-recipe{
     font-size: 16pt;
@@ -428,7 +429,6 @@ svg{
     border-radius: 10px;
     border:none;
     padding: 10px;
-    padding-bottom: 50px;
 }
 
 #rec-book-header{
@@ -557,9 +557,16 @@ svg{
     text-align: left;
 }
 
+#day-title h1{
+    font-size: 2.2vw;
+}
+
 #day-content
 {
     text-align: left;
+}
+#day-content h2{
+    font-size: 1.8vw;
 }
 
 #popupBoxOnePosition
@@ -581,9 +588,30 @@ svg{
 
 .popupBoxContent
 {
-    background-color: #FFF; padding: 15px;
+    background-color: #FFF; 
+    padding: 15px;
+    font-size: 1.6vw;
+}
+.popupBoxContent h3{
+    margin-left:10px;
+    font-size: 1.8vw;
+    font-weight: bold;
 }
 
+.popupBoxContent button{
+    margin: 5px;
+}
+
+.popupBoxContent a{
+    background-color: var(--accent-bg-color);
+    color:var(--accent-text-color);
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+}
+.popupBoxContent a:hover{
+    text-decoration: none;
+}
 table#calorie_table {
     font-size: 18pt;
     border-spacing:5px;
