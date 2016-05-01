@@ -19,7 +19,7 @@ $(function() {
     $('#recipe-minutes').text(time[1]);
     var nutrition = recipe.nutrition;
     var cal = nutrition.fat * 9 + (nutrition.protein + nutrition.carbs)*4;
-    $('#recipe-cal').text(cal.toFixed(2));
+    $('#recipe-cal').text(cal.toFixed(0));
     $('#recipe-fat').text(nutrition.fat.toFixed(2));
     $('#recipe-carbs').text(nutrition.carbs.toFixed(2));
     $('#recipe-prot').text(nutrition.protein.toFixed(2));

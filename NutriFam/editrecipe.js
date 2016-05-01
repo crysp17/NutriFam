@@ -50,6 +50,11 @@ $(function() {
         }
     }
 
+    $('body').on('click','a',function(){
+        var c = confirm("Do you want to leave without saving?");
+        return c;
+    })
+    
     $('#add-ingredient').click(function(){
         var newrow = "<tr class = 'ingredient'><td><input class = 'in-item'></input></td><td><input type = 'number' class = 'in-amt'></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td><td><button class = 'del-button'>x</button></td></tr>"
         $('#ingredients tr:last').after(newrow);
@@ -234,7 +239,7 @@ $(function() {
             }
         })
         cal /= servings;
-        $('#cal-amt').text(cal.toFixed(2));
+        $('#cal-amt').text(cal.toFixed(0));
         fat /= servings;
         $('#fat-amt').text(fat.toFixed(2));
         carbs /= servings;
