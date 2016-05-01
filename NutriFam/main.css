@@ -16,80 +16,113 @@ body{
 #header{
     background-color: var(--main-bg-color);
 }
-.page-header{
-    size: 24pt;
-}
 
-#logo{
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    border: 0;
-    width: 200px;
-}
-#logo:img{
-    width: 200px;
-}
-#logo:after{
-    content: "NutriFam";
-    font-size: 87px;
-    color: var(--main-text-color);
-    vertical-align: bottom;
-    padding: none;
-    margin: none;
-    font-family: 'ABeeZee', sans-serif;
+    overflow: hidden;
+    background-color: var(--main-bg-color);
 }
 
-#logo:hover{
+nav li {
+    float: left;
+    position: absolute;
+    left: -3%;
+    vertical-align: top;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
-#dailytip{
-    font-size: 14pt;
+nav li a:hover:not(.active) {
+    background-color: var(--main-bg-color);
+}
+
+nav #right {
+    float: right !important;
+    position: relative;
+    margin-top: 34px; 
+    margin-bottom: 34px; 
+}
+nav #center {
+    float: left;
+    position: relative;
+    left: 40%;
+}
+nav li #dailytip {
+    font-size: 120%;
     border: 1px;
     border-radius: 10px;
     border-color: var(--main-text-color);
     border-style: solid;
-    padding: 5px;
-    margin: 5px 50px;
-    width:450px;
+    padding: 0.3%;
+    margin: 0.6% 3%;
+    width: 60%;
     text-align: center;
     color: var(--main-text-color);
     display: inline-block;
 }
-#user{
-    float: right; 
-    margin-top: 20px; 
-    margin-right: 60px;
-    margin-left: 250px;
 
-    font-size: 20pt;
-    /*border: 1px;*/
-    /*border-radius: 10px;*/
-    /*border-color: var(--main-text-color);*/
-    /*border-style: solid;*/
-    padding: 5px;
-    text-align: center;
-    /*color: var(--main-text-color);*/
-    /*background-color: #F0F0F0*/
+#logo{
+}
+#logo img{
+    width: 22%;
+}
+img {
+    vertical-align: top;
+    margin-top: -10px;
+}
+#logo:after{
+    display: inline-block;
+    overflow: hidden;
+    content: "NutriFam";
+    font-size: 520%;
+    color: var(--main-text-color);
+    font-family: 'ABeeZee', sans-serif;
+}
+#logo:hover{
+    text-decoration: none;
+}
+
+#user-top {
+    display: inline;
+}
+#user-bottom {
+    display: inline;
+    padding-left: 7px;
 }
 
 #usersite{
     color: var(--main-text-color);
+    font-size: 130%;
 }
-#usersite:after{
-    color: var(--main-text-color);
-    vertical-align: bottom;
-    padding: none;
-    margin: none;
-    font-family: 'ABeeZee', sans-serif;
-}
-
 #usersite:hover{
     text-decoration: none;
 }
 
+@media all and (max-width: 1100px)  {
+  #center {
+    display: none !important;
+  }
+}
+
+
+.container { 
+  overflow: hidden; 
+} 
 #sidebar{
+    margin-bottom: -1000px;
+    padding-bottom: 1000px; 
+
     position:absolute;
-    top: 126px; 
+    top: 120.5px; 
     bottom:0; 
     left:0;
     background-color: var(--secondary-bg-color);
@@ -582,7 +615,6 @@ table#protein_table th {
     margin: 30px;
 }
 
-<<<<<<< HEAD
 #settings-top{
     font-size: 25pt;
     text-align: center;
