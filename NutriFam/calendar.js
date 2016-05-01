@@ -1,5 +1,5 @@
 $(function() {
-    var meals = 
+    var initMeals = 
         {
             breakfast: 
             [
@@ -64,6 +64,15 @@ $(function() {
             [{meal: 'Tacos', members: ['Joanne', 'Jimbob','Mark', 'Matthew', 'Luke', 'John']}]
             ]
         }
+
+    var initialData = JSON.stringify(initMeals);
+
+    if(!sessionStorage.calendarData)
+    {
+      sessionStorage.calendarData = initialData;
+    }
+
+    var meals = jQuery.parseJSON(sessionStorage.calendarData);
 
     var nickname = {Joanne: 'Jo', Jimbob: 'Ji', Matthew: 'Mt', Mark: 'Mr', Luke: "L", John: "Jh"};
     var fam_colors = {Joanne: '#ffcccc', Jimbob: '#ffedcc', Matthew: '#ffffcc', Mark: '#cce5cc', Luke: '#e5e5ff', John: '#e5cce5'};
