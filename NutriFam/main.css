@@ -42,7 +42,6 @@ nav li a {
 }
 
 nav li a:hover:not(.active) {
-    background-color: var(--main-bg-color);
 }
 
 nav #right {
@@ -120,13 +119,13 @@ img {
 #sidebar{
     margin-bottom: -1000px;
     padding-bottom: 1000px; 
-
+    width:21.5%;
     position:absolute;
     top: 120.5px; 
     bottom:0; 
     left:0;
     background-color: var(--secondary-bg-color);
-    font-size: 22pt;
+    font-size: 2.0vw;
     color: var(--main-text-color);
     height: 100%;
 }
@@ -175,7 +174,7 @@ img {
 }
 
 #famprof ul{
-    font-size: 20pt;
+    font-size: 1.9vw;
     background-color: transparent;
     box-shadow: none;
     border: 0px;
@@ -187,40 +186,10 @@ img {
     padding: 3px 30px;
 }
 
-#myCarousel{
-    display:block;
-    width: 70%;
-    height: 70%;
-    margin: 50px auto;
-}
-
-.famday{
-    font-size: 20pt;
-    background-color: White;
-    padding: 50px;
-    height: 100%;
-    color: #666666;
-}
-
-.famday p{
-    padding: 3px;
-}
-
-.famday table{
-    margin: auto;
-}
-
-.carousel-inner{
-    height: 100%;
-}
-
-.item{
-    height:100%;
-}
 
 #dayHeader{
     display: block;
-    font-size: 22pt;
+    font-size: 2.2vw;
     text-align: center;
     color: #666666;
     margin-bottom: 20px;
