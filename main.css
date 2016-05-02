@@ -127,6 +127,7 @@ h5 span {
 }
 #logo img{
     width: 22%;
+    vertical-align: top;
 }
 img {
     vertical-align: top;
@@ -160,7 +161,7 @@ img {
     text-decoration: none;
 }
 
-.dropdown {
+#right .dropdown {
     position: relative;
     display: inline-block;
 
@@ -170,7 +171,7 @@ img {
     text-decoration: none; 
 }
 
-.dropdown-content {
+#right .dropdown-content {
     display: none;
     position: absolute;
     background-color: var(--secondary-bg-color);
@@ -179,12 +180,12 @@ img {
     padding: 12px 16px;*/
 }
 
-.dropdown-content a {
+#right .dropdown-content a {
     display: inline;
     color: black;
 }
 
-.dropdown:hover .dropdown-content {
+#right .dropdown:hover .dropdown-content {
     display: inline;
     text-decoration: none;
 }
