@@ -498,13 +498,21 @@ svg{
     float:left;
     margin: 20px;
 }
+#JimbobWeekpie {
+    float:left;
+    margin: 20px;
+}
+#JimbobMonthpie {
+    float:left;
+    margin: 20px;
+}
 
-#calorie-table{
+#calorie_table{
     float: left;
     margin: 20px;
 }
 
-#calorie-table th, #calorie-table  td{
+#calorie_table th, #calorie_table  td{
     padding: 10px;
 }
 
@@ -619,11 +627,11 @@ svg{
     text-decoration: none;
 }
 table#calorie_table {
-    font-size: 18pt;
+    font-size: 1.6vw;
     border-spacing:5px;
     /*float:right;*/
     display: inline;
-    margin:35px;
+    margin:5%;
     border: solid;
     border-color: gray;
     margin-right:190px;
