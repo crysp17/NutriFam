@@ -38,7 +38,7 @@ function myFunction() {
     goal = goalgrad + ' ' + goaltype;
 
     var newrow = "<tr style = 'font-size: 16px; display: none;'><td id = 'name'><span id = 'tinyLogo' style = 'background-color: var(--main-bg-color)'>NA</span>"+name+"</td><td id = "+age+">AGE</td><td id = "+gender+">GENDER</td><td id = 'flash'><span id = 'active1' class='glyphicon glyphicon-flash' aria-hidden='true' style = 'float: right';><span id == 'active2' class='glyphicon glyphicon-flash' aria-hidden='true' style = 'float: right;'></span></td><td id = "+activity+">ACTIVITY</td><td></td><td id = "+goal+">GOAL</td><td id = "+weight+">WEIGHT</td></tr>";
-    $('#settings-table tr:last').after("<tr><td>"+name+"</td><td>"+age+"</td><td>"+gender+"</td><td></td><td>"+activity+"</td><td></td><td>"+goal+"</td><td style='text-align: center;'>"+weight+"</td></tr>");
+    $('#settings-table tr:last').after("<tr class = 'currentMembers' style = 'font-size: 16px;'><td>"+name+"</td><td>"+age+"</td><td>"+gender+"</td><td></td><td>"+activity+"</td><td></td><td>"+goal+"</td><td style='text-align: center;'>"+weight+"</td></tr>");
 }
 </script>
 </head>
