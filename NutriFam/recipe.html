@@ -102,6 +102,14 @@
         </div>
         <div id= 'cal-pie'>
     </div> 
+    <script>
+        $(document).ready(function(){
+            var width = $(window).width.value
+            if (width <= 1100px){
+                $('#nutrition-display').css('display','none');
+            }
+        });
+    </script>
 </div>
 <!-- Load style sheets -->
 <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -110,7 +118,7 @@
 
 <!-- Load any supplemental Javascript libraries here -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="recipe.js"></script>
