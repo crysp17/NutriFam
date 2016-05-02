@@ -37,7 +37,31 @@ $(function() {
           .text(function(d, ind) { return famday[fam[i]][ind].label; });
     }
    
-    $("#day-title").innerHTML = '<h1 style="margin:auto;font-weight:bold">sessionStorage.editClickedInfo</h1>';
+    document.getElementById("day-title").innerHTML = '<h1 style="margin:auto;font-weight:bold">' + sessionStorage.editClickedInfo + '</h1>';
+
+    var foodForThisMeal = jQuery.parseJSON(sessionStorage.editClickedMealList);
+
+    var mealHTML = '<ul>';
+
+    for(var i=0; i<foodForThisMeal.length; i++)
+    {
+      var mealName = foodForThisMeal[i]["meal"];
+      var members = foodForThisMeal[i]["members"];
+    
+      mealHTML = mealHTML + '<h2><li>' + mealName + ' ( ';
+
+      for(var j=0; j<members.length; j++)
+      {
+        mealHTML += members[j] + " ";
+      }
+
+      mealHTML = mealHTML + ')</li></h2>'
+
+    }
+
+    mealHTML += '</ul>';
+
+    document.getElementById("day-content").innerHTML = mealHTML + document.getElementById("day-content").innerHTML;
 })
 
 function toggle_visibility(id) {

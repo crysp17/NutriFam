@@ -129,67 +129,7 @@
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-    google.charts.load('current', {packages: ['corechart', 'bar']});
-    google.charts.setOnLoadCallback(drawBasic);
-    function drawBasic() {
 
-        var vitamin_data = google.visualization.arrayToDataTable([
-          ['', '', ''],
-          ['B1', 100, 18],
-          ['B12', 97, 0],
-          ['A', 10, 0],
-          ['C', 27, 0]
-        ]);
-
-        var vitamin_options = {
-          title: 'Vitamins:',
-          width: 600,
-          height: 400,
-          chartArea: {width: '75%'},
-          hAxis: {
-            title: 'Daily Percentage Consumed',
-            minValue: 0,
-            ticks: [0, 25, 50, 75, 100, 125]
-          },
-          legend: 'none',
-          bar: {groupWidth: "90%"},
-          isStacked: true,
-          fontSize: 20
-        };
-
-        var vitamin_chart = new google.visualization.BarChart(document.getElementById('vitamin_chart'));
-
-        vitamin_chart.draw(vitamin_data, vitamin_options);
-
-        var mineral_data = google.visualization.arrayToDataTable([
-          ['', '', ''],
-          ['Calcium', 22, 0],
-          ['Iron', 63, 0],
-          ['Sodium', 100, 75],
-        ]);
-
-        var mineral_options = {
-          title: 'Minerals:',
-          width: 600,
-          height: 400,
-          chartArea: {width: '60%'},
-          hAxis: {
-            title: 'Daily Percentage Consumed',
-            minValue: 0,
-            ticks: [0, 50, 100, 150, 200]
-          },
-          legend: 'none',
-          bar: {groupWidth: "90%"},
-          isStacked: true,
-          fontSize: 20
-        };
-
-        var mineral_chart = new google.visualization.BarChart(document.getElementById('mineral_chart'));
-
-        mineral_chart.draw(mineral_data, mineral_options);
-    }
-</script>
 </body>
 
 </html>

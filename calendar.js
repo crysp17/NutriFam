@@ -238,7 +238,5 @@ function editClicked(mealName, weekStart, dateOffset, weekDayName, mealList)
       var targetDate = new Date();
       targetDate.setDate(weekStart.getDate() + dateOffset);
       sessionStorage.editClickedInfo = mealName + " Plan for " + weekDayName + ", " + (targetDate.getMonth()+1) + "/" + targetDate.getDate();
-      sessionStorage.editClickedMealList = mealList;
-
-      alert(sessionStorage.editClickedInfo);
+      sessionStorage.editClickedMealList = JSON.stringify(mealList);
     }
