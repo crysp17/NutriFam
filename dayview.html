@@ -70,23 +70,13 @@
             
         </div>
         <div id = 'day-content'>
-          <button id = 'add-meal' style = 'margin-left:30px; float: left' onclick="toggle_visibility('popupBoxOnePosition');">+</button>
+          <button class = 'add-meal' style = 'margin-left:30px; float: left' onclick="toggle_visibility('popupBoxOnePosition');">+</button>
           <h2 style = 'margin-left:100px; margin-top: 10px;'>Add Recipe From Recipe Book</h2>
           <div id="popupBoxOnePosition">
             <div class="popupBoxWrapper">
               <div class="popupBoxContent">
                 <h3>Recipes</h3>
-                <div style = 'text-align:left'>
-                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'margin-left:30px;'>+</button>
-                  <span style = "margin-top: 5px">Lasagna</span>
-                </div>
-                <div>
-                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'margin-left:30px;'>+</button>
-                  <span style = "margin-top: 5px">Pork Chops</span>
-                </div>
-                <div>
-                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'margin-left:30px;'>+</button>
-                  <span style = "margin-top: 5px">Chicken Tenders</span>
+                <div id = 'popup-recipes'>
                 </div>
                 <div style = 'text-align: right'><a href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">Go back</a></div>
               </div>
@@ -113,7 +103,7 @@
               <br>
               <div style = 'text-align:right;'>
                 <button onclick="location.href='calendarwiththursday.html'" id = 'save-recipe-to-calendar' style = 'float: left;'>Save to Calendar</button>
-                <a href="javascript:void(0)" onclick="toggle_visibility('popupBoxTwoPosition');">Go back</a>
+                <button id = 'popup-back' onclick="toggle_visibility('popupBoxTwoPosition');">Go back</button>
               </div>
               <br>
             </div>
