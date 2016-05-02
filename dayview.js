@@ -57,7 +57,7 @@ $(function() {
           var mealName = foodForThisMeal[i]["meal"];
           var members = foodForThisMeal[i]["members"];
         
-          mealHTML = mealHTML + '<h2><li>' + mealName + '</li></h2>';
+          mealHTML = mealHTML + '<h2><li>' + mealName + '        <button class = "add-meal" id = "button' + i + '">-</button></li></h2>';
 
           mealHTML = mealHTML + '<ul><li><h3>';
           for(var j=0; j<members.length; j++)
@@ -75,6 +75,13 @@ $(function() {
       mealHTML += '</ul>';
 
       document.getElementById("day-content").innerHTML = mealHTML + document.getElementById("day-content").innerHTML;
+
+      for(var i = 0; i <foodForThisMeal.length; i++)
+      {
+        document.getElementById("button" + i + "").click( function () {
+          window.alert("Remove meal: " + foodForThisMeal[i]);
+        });
+      }
     }
 
 
