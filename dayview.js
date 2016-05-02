@@ -88,15 +88,34 @@ $(function() {
             {"title":"Potato Salad","categories":["Lunch"],"servings":"4","time":["0","30"],"ingredients":[{"item":"potato","amount":"1","unit":"lb."},{"item":"mayonanaise","amount":"4","unit":"tbsp."},{"item":"mustard","amount":"2","unit":"tbsp."},{"item":"celery","amount":"4","unit":"oz."}],"directions":["Dice the celery and cube the potatoes.","Boil the potatoes until tender.","Mix the cooked potatoes with the remaining ingredients, then cool. Add salt and pepper to taste."],"nutrition":{"fat":5,"carbs":25.5,"protein":3}}
     }
     if (sessionStorage.recipes == undefined){
-        sessionStorage.recipes = JSON.stringify(recipes);
+        sessionStorage.recipes = JSON.stringify(recipes)
     }
     recipes = Object.keys(JSON.parse(sessionStorage.recipes))
+    console.log(recipes);
     for (var i = 0; i < recipes.length; i++){
       var popup = $('#popup-recipes');
       popup.append('<div><button class = "add-meal" style = "margin-left:30px;">+</button><span style = "margin-top: 5px">'+recipes[i]+'</span></div>');
     }
+    var meal = ''
     $('#popup-recipes .add-meal').on('click', function(){
       toggle_visibility('popupBoxTwoPosition');
+      meal = $(this).parent().find('span').text();
+    })
+
+    $('#save-recipe-to-calendar').on('click',function(){
+      var calData = JSON.parse(sessionStorage.calendarData)
+      var members = [];
+      $('input:checkbox').each(function(){
+        if(this.checked){
+          members.push($(this).val());
+        }
+      })
+      var mealType = sessionStorage.editClickedInfo.split(' ')[0].toLowerCase();
+      var dateOffset = sessionStorage.dateOffset;
+      console.log(members);
+      calData[mealType][dateOffset].push({meal:meal, members:members});
+      sessionStorage.calendarData=JSON.stringify(calData);
+      window.location.href = 'calendar.html';
     })
 
 
