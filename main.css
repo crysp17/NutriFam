@@ -396,14 +396,14 @@ svg{
     margin: 5px 0px;
 }
 
-#add-ingredient, #add-direction, #add-meal{
+#add-ingredient, #add-direction, .add-meal{
     background: var(--accent-bg-color);
     color: var(--accent-text-color);
     border-radius: 10px;
     border:none;
 }
 
-#add-meal{
+.add-meal{
     font-size: 1.6vw;
     width: 6%;
 }
@@ -428,7 +428,7 @@ svg{
     margin: 10px;
 }
 
-#save-recipe-to-calendar
+#save-recipe-to-calendar, #popup-back
 {
     color: var(--accent-text-color);
     background: var(--accent-bg-color);
