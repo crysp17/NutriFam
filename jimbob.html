@@ -76,7 +76,7 @@
     </div>
     <div id = 'profile-header-info'>
         <h1 style="float:left;font-weight:bold">Jimbob's Nutrition Report</h1>
-        <h1 style="float:right;border:solid;padding:5px;border-width:2px">04/11/2016<h1>
+        <h1 style="float:right;border:solid;padding:5px;border-width:2px"><span id="time"></span><h1>
         <br><br>
         <h2> Goal: Lower cholesterol and lose 5 lbs in 2 months. </h2>
         <h2>Progress: In 1 month, Jimbob has lost 1 lb. Jimbob has not entered any new cholesterol measurements. He is currently at HDL = 50 mg/dL, LDL = 100 mg/dL.</h2>
@@ -84,11 +84,12 @@
 </div>
 
 <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="pill" href="#dailyView">Daily</a></li>
-  <li><a data-toggle="pill" href="#weeklyView">Weekly</a></li>
-  <li><a data-toggle="pill" href="#monthlyView">Monthly</a></li>
+  <li class="active"><a data-toggle="pill" href="#dailyView">Today</a></li>
+  <li><a data-toggle="pill" href="#weeklyView">This Week's Average</a></li>
+  <li><a data-toggle="pill" href="#monthlyView">This Month's Average</a></li>
 </ul>
 
+<div class="tab-content"> <!-- TAB CONTENT START -->
 <div id="dailyView" class="tab-pane fade in active">
     <div id = 'profile-bottom-stuff'>
         <div id = 'profile-first-row'>
@@ -99,7 +100,7 @@
                 <h4> Protein: 14.9%</h4>
             </div>
             <div id = 'Jimbobpie'></div>
-            <table id="calorie-table">
+            <table id="calorie_table">
               <tr>
                 <th>Calories:</th>
                 <th>2262 kcal</th>
@@ -133,8 +134,8 @@
             </table>
         </div>
         <div id = 'profile-second-row'>
-            <div id="vitamin_chart" style="float:left;display:block;width:50%;margin-top:20px;"></div>
-            <div id="mineral_chart" style="float:left;display:block;width:50%;margin-top:20px;"></div>
+            <div id="vitamin_chart" style="float:left;display:block;width:50%;margin-top:20px;margin-bottom:20px"></div>
+            <div id="mineral_chart" style="float:left;display:block;width:50%;margin-top:20px;margin-bottom:20px"></div>
         </div>
         <div id = 'profile-third-row'>
             <div style="float:left;padding-left:80px;margin-top:10px;">
@@ -203,18 +204,231 @@
 <!-- !!!!!!!!!!!!!!!!!!!!! WEEKLY VIEW !!!!!!!!!!!!!!!!!!!!! -->
 
 <div id="weeklyView" class="tab-pane fade">
-      <h3>Weekly</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div id = 'profile-bottom-stuff'>
+        <div id = 'profile-first-row'>
+            <div id = 'Jimbob-calorie-source'>
+                <h3>Calorie Source<br><u>Breakdown</u></h3>
+                <h4> Carbs: 49.0%</h4>
+                <h4> Fat: 40.2%</h4>
+                <h4> Protein: 10.8%</h4>
+            </div>
+            <div id = 'JimbobWeekpie'></div>
+            <table id="calorie_table">
+              <tr>
+                <th>Calories:</th>
+                <th>2003 kcal</th>
+                <th>101%</th>
+              </tr>
+              <tr>
+                <td>Fat:</td>
+                <td>70.3g</td> 
+                <td>450%</td>
+              </tr>
+              <tr>
+                <td>Protein:</td>
+                <td>56.7g</td> 
+                <td>183%</td>
+              </tr>
+              <tr>
+                <td>Cholesterol:</td>
+                <td>154.3mg</td> 
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sodium:</td>
+                <td>3511.1mg</td> 
+                <td>179%</td>
+              </tr>
+              <tr>
+                <td>Carbs:</td>
+                <td>233.2g</td> 
+                <td>35%</td>
+              </tr>
+            </table>
+        </div>
+        <div id = 'profile-second-row'>
+            <div id="vitamin_chart_week" style="float:left;display:block;width:50%;margin-top:20px;margin-bottom:20px"></div>
+            <div id="mineral_chart_week" style="float:left;display:block;width:50%;margin-top:20px;margin-bottom:20px"></div>
+        </div>
+        <div id = 'profile-third-row'>
+            <div style="float:left;padding-left:80px;margin-top:10px;">
+                <table id="lipid_table">
+                  <tr>
+                    <th colspan="2">Lipids:</th>
+                  </tr>
+                  <tr>
+                    <td>Fat:</td>
+                    <td>60.8g (99%)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Monosaturated:</td>
+                    <td>83.8g</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Polyunsaturated:</td>
+                    <td>189.2mg</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:60px">Omega-3:</td>
+                    <td>3986.1mg</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:60px">Omega-6:</td>
+                    <td>301.4g</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Saturated:</td>
+                    <td>245.2g</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Trans-Fats:</td>
+                    <td>280.7g</td> 
+                  </tr>
+                  <tr>
+                    <td>Cholesterol:</td>
+                    <td>279.0g</td> 
+                  </tr>
+                </table>
+            </div>
+            <div style="float:right;padding-right:135px;margin-top:10px;">
+                <table id="protein_table">
+                  <tr>
+                    <th>Proteins:</th>
+                    <th>75.9g (130%)</th>
+                  </tr>
+                  <tr>
+                    <td>Cystine:</td>
+                    <td>1.0g</td> 
+                  </tr>
+                  <tr>
+                    <td>Histidine:</td>
+                    <td>0.9g</td> 
+                  </tr>
+                  <tr>
+                    <td>Lysine:</td>
+                    <td>2.1g</td> 
+                  </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- !!!!!!!!!!!!!!!!!!!!! WEEKLY VIEW !!!!!!!!!!!!!!!!!!!!! -->
+<!-- !!!!!!!!!!!!!!!!!!!!! MONTHLY VIEW !!!!!!!!!!!!!!!!!!!!! -->
 
 <div id="monthlyView" class="tab-pane fade">
-      <h3>Monthly</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div id = 'profile-bottom-stuff'>
+        <div id = 'profile-first-row'>
+            <div id = 'Jimbob-calorie-source'>
+                <h3>Calorie Source<br><u>Breakdown</u></h3>
+                <h4> Carbs: 58.1%</h4>
+                <h4> Fat: 32.3%</h4>
+                <h4> Protein: 9.6%</h4>
+            </div>
+            <div id = 'JimbobMonthpie'></div>
+            <table id="calorie_table">
+              <tr>
+                <th>Calories:</th>
+                <th>2151 kcal</th>
+                <th>102%</th>
+              </tr>
+              <tr>
+                <td>Fat:</td>
+                <td>77.8g</td> 
+                <td>496%</td>
+              </tr>
+              <tr>
+                <td>Protein:</td>
+                <td>75.6g</td> 
+                <td>237%</td>
+              </tr>
+              <tr>
+                <td>Cholesterol:</td>
+                <td>163.5mg</td> 
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sodium:</td>
+                <td>3254.8mg</td> 
+                <td>266%</td>
+              </tr>
+              <tr>
+                <td>Carbs:</td>
+                <td>254.9g</td> 
+                <td>48%</td>
+              </tr>
+            </table>
+        </div>
+        <div id = 'profile-second-row'>
+            <div id="vitamin_chart_month" style="float:left;display:block;width:50%;margin-top:20px;margin-bottom:20px"></div>
+            <div id="mineral_chart_month" style="float:left;display:block;width:50%;margin-top:20px;margin-bottom:20px"></div>
+        </div>
+        <div id = 'profile-third-row'>
+            <div style="float:left;padding-left:80px;margin-top:10px;">
+                <table id="lipid_table">
+                  <tr>
+                    <th colspan="2">Lipids:</th>
+                  </tr>
+                  <tr>
+                    <td>Fat:</td>
+                    <td>71.0g (111%)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Monosaturated:</td>
+                    <td>75.6g</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Polyunsaturated:</td>
+                    <td>103.4mg</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:60px">Omega-3:</td>
+                    <td>4001.6mg</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:60px">Omega-6:</td>
+                    <td>305.8g</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Saturated:</td>
+                    <td>299.1g</td> 
+                  </tr>
+                  <tr>
+                    <td style="padding-left:40px">Trans-Fats:</td>
+                    <td>280.7g</td> 
+                  </tr>
+                  <tr>
+                    <td>Cholesterol:</td>
+                    <td>276.9g</td> 
+                  </tr>
+                </table>
+            </div>
+            <div style="float:right;padding-right:135px;margin-top:10px;">
+                <table id="protein_table">
+                  <tr>
+                    <th>Proteins:</th>
+                    <th>75.4g (151%)</th>
+                  </tr>
+                  <tr>
+                    <td>Cystine:</td>
+                    <td>1.0g</td> 
+                  </tr>
+                  <tr>
+                    <td>Histidine:</td>
+                    <td>1.2g</td> 
+                  </tr>
+                  <tr>
+                    <td>Lysine:</td>
+                    <td>2.3g</td> 
+                  </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- !!!!!!!!!!!!!!!!!!!!! DONE WITH VIEWS !!!!!!!!!!!!!!!!!!!!! -->
+</div> <!-- TAB CONTENT END -->
 
 </div>
 
@@ -225,10 +439,30 @@
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
+  // Set date up
+  var today = new Date();
+  document.getElementById('time').innerHTML=(today.getMonth()+1) + "/" + (today.getDay()+1) + "/16";
+  // Set up tab switching functionality (otherwise JS won't load between pages)
+  $('.nav-tabs a').on('shown.bs.tab', function(event){
+    var x = $(event.target).text();         // active tab
+    var y = $(event.relatedTarget).text();  // previous tab
+    console.log(x);
+    if (x == "Today") {
+        drawBasic();
+    }
+    if (x == "This Week's Average") {
+        drawBasicWeekly();
+    }
+    if (x == "This Month's Average") {
+        drawBasicMonthly();
+    }
+});
+</script>
+<script>
     google.charts.load('current', {packages: ['corechart', 'bar']});
     google.charts.setOnLoadCallback(drawBasic);
+    // Daily chart drawer
     function drawBasic() {
-
         var vitamin_data = google.visualization.arrayToDataTable([
           ['', '', ''],
           ['B1', 100, 18],
@@ -239,8 +473,8 @@
 
         var vitamin_options = {
           title: 'Vitamins:',
-          width: 600,
-          height: 400,
+          width: 450,
+          height: 300,
           chartArea: {width: '75%'},
           hAxis: {
             title: 'Daily Percentage Consumed',
@@ -254,6 +488,122 @@
         };
 
         var vitamin_chart = new google.visualization.BarChart(document.getElementById('vitamin_chart'));
+
+        vitamin_chart.draw(vitamin_data, vitamin_options);
+
+        var mineral_data = google.visualization.arrayToDataTable([
+          ['', '', ''],
+          ['Calcium', 22, 0],
+          ['Iron', 63, 0],
+          ['Sodium', 100, 75],
+        ]);
+
+        var mineral_options = {
+          title: 'Minerals:',
+          width: 450,
+          height: 300,
+          chartArea: {width: '60%'},
+          hAxis: {
+            title: 'Daily Percentage Consumed',
+            minValue: 0,
+            ticks: [0, 50, 100, 150, 200]
+          },
+          legend: 'none',
+          bar: {groupWidth: "90%"},
+          isStacked: true,
+          fontSize: 20
+        };
+
+        var mineral_chart = new google.visualization.BarChart(document.getElementById('mineral_chart'));
+
+        mineral_chart.draw(mineral_data, mineral_options);
+    }
+
+    // Weekly chart drawer
+    function drawBasicWeekly() {
+        var vitamin_data = google.visualization.arrayToDataTable([
+          ['', '', ''],
+          ['B1', 100, 18],
+          ['B12', 97, 0],
+          ['A', 10, 0],
+          ['C', 27, 0]
+        ]);
+
+        var vitamin_options = {
+          title: 'Vitamins:',
+          width: 450,
+          height: 300,
+          chartArea: {width: '75%'},
+          hAxis: {
+            title: 'Daily Percentage Consumed',
+            minValue: 0,
+            ticks: [0, 25, 50, 75, 100, 125]
+          },
+          legend: 'none',
+          bar: {groupWidth: "90%"},
+          isStacked: true,
+          fontSize: 20
+        };
+
+        var vitamin_chart = new google.visualization.BarChart(document.getElementById('vitamin_chart_week'));
+
+        vitamin_chart.draw(vitamin_data, vitamin_options);
+
+        var mineral_data = google.visualization.arrayToDataTable([
+          ['', '', ''],
+          ['Calcium', 22, 0],
+          ['Iron', 63, 0],
+          ['Sodium', 100, 75],
+        ]);
+
+        var mineral_options = {
+          title: 'Minerals:',
+          width: 450,
+          height: 300,
+          chartArea: {width: '60%'},
+          hAxis: {
+            title: 'Daily Percentage Consumed',
+            minValue: 0,
+            ticks: [0, 50, 100, 150, 200]
+          },
+          legend: 'none',
+          bar: {groupWidth: "90%"},
+          isStacked: true,
+          fontSize: 20
+        };
+
+        var mineral_chart = new google.visualization.BarChart(document.getElementById('mineral_chart_week'));
+
+        mineral_chart.draw(mineral_data, mineral_options);
+    }
+
+    // Monthly chart drawer
+    function drawBasicMonthly() {
+        var vitamin_data = google.visualization.arrayToDataTable([
+          ['', '', ''],
+          ['B1', 100, 18],
+          ['B12', 97, 0],
+          ['A', 10, 0],
+          ['C', 27, 0]
+        ]);
+
+        var vitamin_options = {
+          title: 'Vitamins:',
+          width: 450,
+          height: 300,
+          chartArea: {width: '75%'},
+          hAxis: {
+            title: 'Daily Percentage Consumed',
+            minValue: 0,
+            ticks: [0, 25, 50, 75, 100, 125]
+          },
+          legend: 'none',
+          bar: {groupWidth: "90%"},
+          isStacked: true,
+          fontSize: 20
+        };
+
+        var vitamin_chart = new google.visualization.BarChart(document.getElementById('vitamin_chart_month'));
 
         vitamin_chart.draw(vitamin_data, vitamin_options);
 
@@ -280,7 +630,7 @@
           fontSize: 20
         };
 
-        var mineral_chart = new google.visualization.BarChart(document.getElementById('mineral_chart'));
+        var mineral_chart = new google.visualization.BarChart(document.getElementById('mineral_chart_month'));
 
         mineral_chart.draw(mineral_data, mineral_options);
     }

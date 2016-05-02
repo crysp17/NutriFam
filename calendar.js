@@ -42,7 +42,7 @@ $(function() {
              {meal:'Chicken Salad', members:['Mark', 'Matthew', 'Luke', 'John']}],
 
             [{meal: 'Chef Salad', members: ['Joanne', 'Jimbob']},
-             {meal:'Turkey $ Swiss', members:['Mark', 'Matthew', 'Luke', 'John']}],
+             {meal:'Turkey & Swiss', members:['Mark', 'Matthew', 'Luke', 'John']}],
 
             [{meal: 'Fried Chicken', members: ['Joanne', 'Jimbob','Mark', 'Matthew', 'Luke', 'John']}]
             ],
@@ -74,6 +74,7 @@ $(function() {
     var d1 = sunday.getDate();
     var m2 = saturday.getMonth()+1;
     var d2 = saturday.getDate();
+
     var output = (m1<10 ? '0' : '') + m1 + '/' + (d1<10 ? '0' : '') +d1+ '/' + sunday.getFullYear()
     			+' - '+
     			(m2<10 ? '0' : '') + m2 + '/' + (d2<10 ? '0' : '') +d2+ '/' + saturday.getFullYear();
@@ -116,16 +117,18 @@ $(function() {
     var nickname = {Joanne: 'Jo', Jimbob: 'Ji', Matthew: 'Mt', Mark: 'Mr', Luke: "L", John: "Jh"};
     var fam_colors = {Joanne: '#ffcccc', Jimbob: '#ffedcc', Matthew: '#ffffcc', Mark: '#cce5cc', Luke: '#e5e5ff', John: '#e5cce5'};
     var keys = Object.keys(meals);
+
     for (var i = 0; i < keys.length; i++){
+        //m = breakfast, lunch, or dinner
         var m = meals[keys[i]];
         var row = $('#'+keys[i]);
         for (var j = 0; j < m.length; j++){
             var day = m[j]
-            var col = '<td>';
+            var col = '<td style = "position: relative;">';
             for (var k = 0; k < day.length; k++){
                 if(day[k].meal == null)
                 {
-                  col += '<div class = "meal"><p><b><a href="dayview.html">Add a meal</a></b></p>';
+                  //col += '<div class = "meal"><p><b><a href="dayview.html">Add a meal</a></b></p>';
                 }
                 else
                 {
@@ -137,60 +140,105 @@ $(function() {
                   col += '</div>';
                 }
             }
+            col += '<a href="dayview.html"><img src = "images/pencil.png" id = "' + keys[i] + '' + j + '" ></a>';
             col += '</td>';
             row.append(col);   
         }
 
     }
 
-    var table = $('calendar');
-    /*
-    for(var i = 0; i < table.rows.length; i++)
-    {
-      for(var j = 0; j < table.rows[i].cells.length; j++)
-      {
-        table.rows[i].cells[j].onclick = (function(i,j) {
-                return function () 
-                {
-                  location.href = "dayview.html";
-                  if(!(i==2 || i==4 || i==6))
-                  {
-                    //if the row doesn't contain meal information,
-                    //do nothing.
-                  }
-                  else
-                  {
-                    var blod; //breakfast, lunch, or dinner?
-                    var curMeals = []; //list of meals being eaten at that time, mapped to who is eating them
-                    if(i==2)
-                    {
-                      blod = 'breakfast';
-                      for(var k = 0; k < meals[breakfast][j].length; k++)
-                      {
-                        curMeals.append(meals[breakfast][j][k]);
-                      }
-                    }
-                    if(i==4)
-                    {
-                      blod = 'lunch';
-                      for(var k = 0; k < meals[lunch][j].length; k++)
-                      {
-                        curMeals.append(meals[lunch][j][k]);
-                      }
-                    }
-                    if(i==6)
-                    {
-                      blod = 'dinner';
-                      for(var k = 0; k < meals[dinner][j].length; k++)
-                      {
-                        curMeals.append(meals[dinner][j][k]);
-                      }
-                    }
-                  }
-                };
-            }(i, j));
-      }
-    }
-    */
+    $("#breakfast0").click(function () {
+      editClicked("Breakfast", sunday, 0, "Sunday", meals["breakfast"][0]);
+    });
+
+    $("#breakfast1").click(function () {
+      editClicked("Breakfast", sunday, 1, "Monday", meals["breakfast"][1]);
+    });
+
+    $("#breakfast2").click(function () {
+      editClicked("Breakfast", sunday, 2, "Tuesday", meals["breakfast"][2]);
+    });
+
+    $("#breakfast3").click(function () {
+      editClicked("Breakfast", sunday, 3, "Wednesday", meals["breakfast"][3]);
+    });
+
+    $("#breakfast4").click(function () {
+      editClicked("Breakfast", sunday, 4, "Thursday", meals["breakfast"][4]);
+    });
+
+    $("#breakfast5").click(function () {
+      editClicked("Breakfast", sunday, 5, "Friday", meals["breakfast"][5]);
+    });
+
+    $("#breakfast6").click(function () {
+      editClicked("Breakfast", sunday, 6, "Saturday", meals["breakfast"][6]);
+    });
+
+    $("#lunch0").click(function () {
+      editClicked("Lunch", sunday, 0, "Sunday", meals["lunch"][0]);
+    });
+
+    $("#lunch1").click(function () {
+      editClicked("Lunch", sunday, 1, "Monday", meals["lunch"][1]);
+    });
+
+    $("#lunch2").click(function () {
+      editClicked("Lunch", sunday, 2, "Tuesday", meals["lunch"][2]);
+    });
+
+    $("#lunch3").click(function () {
+      editClicked("Lunch", sunday, 3, "Wednesday", meals["lunch"][3]);
+    });
+
+    $("#lunch4").click(function () {
+      editClicked("Lunch", sunday, 4, "Thursday", meals["lunch"][4]);
+    });
+
+    $("#lunch5").click(function () {
+      editClicked("Lunch", sunday, 5, "Friday", meals["lunch"][5]);
+    });
+
+    $("#lunch6").click(function () {
+      editClicked("Lunch", sunday, 6, "Saturday", meals["lunch"][6]);
+    });
+
+    $("#dinner0").click(function () {
+      editClicked("Dinner", sunday, 0, "Sunday", meals["dinner"][0]);
+    });
+
+    $("#dinner1").click(function () {
+      editClicked("Dinner", sunday, 1, "Monday", meals["dinner"][1]);
+    });
+
+    $("#dinner2").click(function () {
+      editClicked("Dinner", sunday, 2, "Tuesday", meals["dinner"][2]);
+    });
+
+    $("#dinner3").click(function () {
+      editClicked("Dinner", sunday, 3, "Wednesday", meals["dinner"][3]);
+    });
+
+    $("#dinner4").click(function () {
+      editClicked("Dinner", sunday, 4, "Thursday", meals["dinner"][4]);
+    });
+
+    $("#dinner5").click(function () {
+      editClicked("Dinner", sunday, 5, "Friday", meals["dinner"][5]);
+    });
+
+    $("#dinner6").click(function () {
+      editClicked("Dinner", sunday, 6, "Saturday", meals["dinner"][6]);
+    });
 
 })
+
+function editClicked(mealName, weekStart, dateOffset, weekDayName, mealList)
+    {
+      var targetDate = new Date();
+      targetDate.setDate(weekStart.getDate() + dateOffset);
+      sessionStorage.editClickedInfo = mealName + " Plan for " + weekDayName + ", " + (targetDate.getMonth()+1) + "/" + targetDate.getDate();
+      sessionStorage.editClickedMealList = mealList;
+
+      alert(sessionStorage.editClickedInfo);
+    }
