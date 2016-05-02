@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>NutriFam</title>
+</head>
+
+<body>
+<nav id = 'header' class = 'navbar navbar-default'>
+    <ul>
+        <li class = "active">
+           <a id = 'logo' href = 'index.html'><img src = 'nutri.png'></a>
+        </li>
+        <li id = "right">
+                <a id = 'usersite' href = 'usersettings.html' style = "color: black;">
+                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+                    <span id='user-bottom'>Guest</span>
+                </a>
+        </li>
+        <li id = "center">
+            <div id = 'dailytip'> 
+                <p><b>Tip of the Day</b></p>
+                <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
+            </div>
+        </li>
+    </ul>
+</nav>
+<div id = "login-main" style = "margin: 0 auto;">
+    <form class="form-signin" action="usersettings.html">
+        <h2 class="form-welcome">Welcome to NutriFam!</h2>
+    <div id = "hide-after">
+        <label for="inputEmail" class="sr-only">Email Address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email Address"  autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
+        <button class="btn btn-lg btn-primary btn-block" style = "padding-bottom: 5px;" >Sign in</button>
+
+        <h5><span>or</span></h5>
+
+        <input class="btn btn-lg btn-primary btn-block" type="button" value="Sign Up" onclick = "clickreveal()">
+    </div>
+    <div id = "reveal">
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="name" id="inputName" class="form-control" placeholder="Name"  autofocus>
+        <label for="inputEmail" class="sr-only">Email Address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email Address"  autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
+        <button class="btn btn-lg btn-primary btn-block" type="submit")>Sign up</button>
+    </div>
+
+    <script>
+        function clickreveal(){
+            $('#reveal').css('display', 'block');
+            $('#hide-after').css('display', 'none');
+        };
+    </script>
+
+      </form>
+</div>
+
+<!-- Load style sheets -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css" />
+
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+</body>
+</html>

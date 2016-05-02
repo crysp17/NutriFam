@@ -56,51 +56,60 @@
                 <li><a href="luke.html">Luke</a></li>
                 <li><a href="john.html">John</a></li>
             </ul>
-        </li>
-    </ul>
+        </li>    </ul>
 </div>
 <div id = 'main'>
     <div id = 'recipe-input'>
-        <div><b>Title: </b><span id = 'recipe-title'></span></div>
+        <div><b>Title: </b> <input id = 'recipe-title'></input></div>
         <div><b>Category: </b>
-            <span id = 'recipe-categories'></span>
+            <input type = 'checkbox' class = 'recipe-check' value = 'Breakfast'>Breakfast</input>
+            <input type = 'checkbox' class = 'recipe-check' value = 'Lunch'>Lunch</input>
+            <input type = 'checkbox' class = 'recipe-check' value = 'Dinner'>Dinner</input>
         </div>
-        <div><b>Servings: </b><span id = 'recipe-servings'></span></div>
+        <div><b>Servings: </b><input style = 'width: 60px' type = 'number' min = '1' step = '1' id = 'recipe-servings'></input></div>
         <div><b>Time Length: </b>
-            <span id = 'recipe-hours'></span> Hr. <span id = 'recipe-minutes'></span> Min.
+            <input style = 'width: 60px' type = 'number' min = '0' step = '1' id = 'recipe-hours'></input> Hr.
+            <input style = 'width: 60px' type = 'number' min = '0' max = '59' step = '1' id = 'recipe-minutes'></input> Min.
         </div>
         <div><b>Ingredients: </b>
-            <ul id = 'ingredients-list'>
-            </ul>
+            <table id = 'ingredients'>
+                <tr id = 'ingredients-header'>
+                    <td>Item</td>
+                    <td>Qty</td>
+                    <td>Unit</td>
+                </tr>
+              </table>
+              <button id = 'add-ingredient' style = 'width: 415px; margin-left:30px;'>+</button>
         </div>
         <div><b>Directions: </b>
-            <ol id = 'directions-list'>
+            <ol id = 'directions'>
+        
             </ol>
-
+            <button id = 'add-direction' style = 'width: 415px; margin-left:30px;'>+</button>
         </div>
-        <div id = 'recipe-buttons'>
-            <button id = 'edit-recipe'>Edit Recipe</button>
-            <button id = 'del-recipe'>Delete Recipe</button>
+        <div style = 'text-align: center'>
+            <button id = 'save-recipe'>Save Recipe</button>
         </div>
     </div>
     <div id = 'nutrition-display'>
         <div id = 'nutr-header'>Nutrition Per Serving</div>
         <div id = 'calories'>
-            <b>Calories: </b><span id = 'recipe-cal'></span>
+            <b>Calories: </b><span id = 'cal-amt'>0</span>
         </div>
         <div id = 'fat'>
             <div style = 'display: inline-block; height: 18px; width: 18px; background-color:CornflowerBlue;'></div>
-            <b>Fat: </b><span id = 'recipe-fat'></span> g.
+            <b>Fat: </b><span id = 'fat-amt'>0</span> g.
         </div>
         <div id = 'carbs'>
             <div style = 'display: inline-block; height: 18px; width: 18px; background-color:#b4f49f;'></div>
-            <b>Carbs: </b><span id = 'recipe-carbs'></span> g.
+            <b>Carbs: </b><span id = 'carbs-amt'>0</span> g.
         </div>
         <div id = 'protein'>
             <div style = 'display: inline-block; height: 18px; width: 18px; background-color:Salmon;'></div>
-            <b>Protein: </b><span id = 'recipe-prot'></span> g.
+            <b>Protein: </b><span id = 'prot-amt'>0</span> g.
         </div>
         <div id= 'cal-pie'>
+        </div>
     </div> 
     <script>
         $(document).ready(function(){
@@ -118,10 +127,10 @@
 
 <!-- Load any supplemental Javascript libraries here -->
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="recipe.js"></script>
+<script type="text/javascript" src="editrecipe.js"></script>
 
 </body>
 

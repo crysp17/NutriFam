@@ -9,21 +9,34 @@
 
 <body>
 <nav id = 'header' class = 'navbar navbar-default'>
-    <ul class = 'nav navbar-nav navbar-left'>
-        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
-    </ul>
-    <ul class = 'nav navbar-nav navbar-right'>
-        <div id = 'dailytip'> 
-            <p><b>Tip of the Day</b></p>
-            <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
-        </div>
+    <ul>
+        <li class = "active">
+           <a id = 'logo' href = 'index.html'><img src = 'nutri.png'></a>
+        </li>
+        <li id = "right">
+                <a id = 'usersite' href = 'usersettings.html'>
+                    <span id = 'tinyLogo' style = 'background-color: #ffcccc;'>Jo</span>
+                    <span id='user-bottom'>Joanne</span>
+                </a>
+        </li>
+        <li id = "center">
+            <div id = 'dailytip'> 
+                <p><b>Tip of the Day</b></p>
+                <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
+            </div>
+        </li>
     </ul>
 </nav>
 <div id = 'sidebar'>
     <ul class = nav nav-pills nav-stacked>
         <li> 
+            <a href="index.html">
+                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Today's Eats
+            </a> 
+        </li>
+        <li id="sidebar-selected"> 
             <a href="calendar.html">
-                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendar
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Week's Eats
             </a> 
         </li>
         <li> 
@@ -32,30 +45,35 @@
             </a> 
         </li>
         <li role="presentation" class="dropdown" id = 'famprof'>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Family Nutrition <span class="caret"></span>
-            </a>
+            <span id = 'nutri-rep'>
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
+            </span>
             <ul class="dropdown-menu">
-                <li><a href="#">Joanne</a></li>
+                <li><a href="joanne.html">Joanne</a></li>
                 <li><a href="jimbob.html">Jimbob</a></li>
-                <li><a href="#">Matthew</a></li>
-                <li><a href="#">Mark</a></li>
-                <li><a href="#">Luke</a></li>
-                <li><a href="#">John</a></li>
+                <li><a href="matthew.html">Matthew</a></li>
+                <li><a href="mark.html">Mark</a></li>
+                <li><a href="luke.html">Luke</a></li>
+                <li><a href="john.html">John</a></li>
             </ul>
         </li>
     </ul>
 </div>
 <div id = 'main'>
+    <div id = 'days-wrapper'>
+        <button id = 'left-days'><span class = 'glyphicon glyphicon-chevron-left'></span></button>
+        <span id = 'days'></span>
+        <button id = 'right-days'><span class = 'glyphicon glyphicon-chevron-right'></span></button>
+    </div>
     <table class = 'calendar' style = 'width: 90%' align = 'center'>
         <tr id = 'dates'>
-            <td><b>Sunday 4/24</b></td>
-            <td><b>Monday 4/25</b></td>
-            <td><b>Tuesday 4/26</b></td>
-            <td><b>Wednesday 4/27</b></td>
-            <td><b>Thursday 4/28</b></td>
-            <td><b>Friday 4/29</b></td>
-            <td><b>Saturday 4/30</b></td>
+            <td><b>Sunday</b></td>
+            <td><b>Monday</b></td>
+            <td><b>Tuesday</b></td>
+            <td><b>Wednesday</b></td>
+            <td><b>Thursday</b></td>
+            <td><b>Friday</b></td>
+            <td><b>Saturday</b></td>
         </tr>
         <tr class = 'calendar-header'>
             <td>Breakfast</td>
@@ -103,6 +121,7 @@
 <script type="text/javascript" src="calendar.js"></script>
 <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
 
 </body>
 

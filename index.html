@@ -9,21 +9,34 @@
 
 <body>
 <nav id = 'header' class = 'navbar navbar-default'>
-    <ul class = 'nav navbar-nav navbar-left'>
-        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
-    </ul>
-    <ul class = 'nav navbar-nav navbar-right'>
-        <div id = 'dailytip'> 
-            <p><b>Tip of the Day</b></p>
-            <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
-        </div>
+    <ul>
+        <li class = "active">
+           <a id = 'logo' href = 'index.html'><img src = 'nutri.png'></a>
+        </li>
+        <li id = "right">
+                <a id = 'usersite' href = 'usersettings.html'>
+                    <span id = 'tinyLogo' style = 'background-color: #ffcccc;'>Jo</span>
+                    <span id='user-bottom'>Joanne</span>
+                </a>
+        </li>
+        <li id = "center">
+            <div id = 'dailytip'> 
+                <p><b>Tip of the Day</b></p>
+                <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
+            </div>
+        </li>
     </ul>
 </nav>
 <div id = 'sidebar'>
     <ul class = nav nav-pills nav-stacked>
+        <li id="sidebar-selected"> 
+            <a href="index.html">
+                  <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Today's Eats
+            </a> 
+        </li>
         <li> 
             <a href="calendar.html">
-                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendar
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Week's Eats
             </a> 
         </li>
         <li> 
@@ -32,16 +45,16 @@
             </a> 
         </li>
         <li role="presentation" class="dropdown" id = 'famprof'>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Family Nutrition <span class="caret"></span>
-            </a>
+            <span id = 'nutri-rep'>
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
+            </span>
             <ul class="dropdown-menu">
-                <li><a href="#">Joanne</a></li>
+                <li><a href="joanne.html">Joanne</a></li>
                 <li><a href="jimbob.html">Jimbob</a></li>
-                <li><a href="#">Matthew</a></li>
-                <li><a href="#">Mark</a></li>
-                <li><a href="#">Luke</a></li>
-                <li><a href="#">John</a></li>
+                <li><a href="matthew.html">Matthew</a></li>
+                <li><a href="mark.html">Mark</a></li>
+                <li><a href="luke.html">Luke</a></li>
+                <li><a href="john.html">John</a></li>
             </ul>
         </li>
     </ul>
@@ -49,78 +62,78 @@
 <div id = 'main'>
 
 <div id = 'dayHeader'>
-    Hi Joanne! Here's what your family is eating today.
+    Hi, Joanne! Here's what your family is eating today.
 </div>
 
 <div id = 'entireFamilyMeals'>
 <table border="0">
 <tr>
 <td>
-    <div id = 'mealEntryWords'>
+    <span class = 'mealEntryLogo' style = 'background-color: #ffcccc'>
+        Jo
+    </span>
+    <div class = 'mealEntryWords'>
         <h3>Joanne's Day</h3>
         <h4>Breakfast: Oatmeal</h4>
         <h4>Lunch: Quesadilla</h4>
         <h4>Dinner: Chicken Alfredo</h4>
     </div>
-    <div id = 'mealEntryLogo'>
-        <img src="images/JoanneLogo.png" height="140" width="140">
-    </div>
 </td>
 <td>
-    <div id = 'mealEntryWords'>
+    <span class = 'mealEntryLogo' style = 'background-color: #ffedcc'>
+        Ji
+    </span>
+    <div class = 'mealEntryWords'>
         <h3>Jimbob's Day</h3>
         <h4>Breakfast: Oatmeal</h4>
         <h4>Lunch: Quesadilla</h4>
         <h4>Dinner: Chicken Alfredo</h4>
     </div>
-    <div id = 'mealEntryLogo'>
-        <img src="images/JimbobLogo.png" height="140" width="140">
-    </div>
 </td>
 <td>
-    <div id = 'mealEntryWords'>
+    <span class = 'mealEntryLogo' style = 'background-color: #ffffcc'>
+        Mt
+    </span>
+    <div class = 'mealEntryWords'>
         <h3>Matthew's Day</h3>
         <h4>Breakfast: Cheerios</h4>
         <h4>Lunch: Tuna Sandwich</h4>
         <h4>Dinner: Chicken Alfredo</h4>
     </div>
-    <div id = 'mealEntryLogo'>
-        <img src="images/MatthewLogo.png" height="140" width="140">
-    </div>
 </td>
 </tr>
 <tr>
 <td>
-    <div id = 'mealEntryWords'>
+    <span class = 'mealEntryLogo' style = 'background-color: #cce5cc'>
+        Mr
+    </span>
+    <div class = 'mealEntryWords'>
         <h3>Mark's Day</h3>
         <h4>Breakfast: Cheerios</h4>
         <h4>Lunch: Tuna Sandwich</h4>
         <h4>Dinner: Chicken Alfredo</h4>
     </div>
-    <div id = 'mealEntryLogo'>
-        <img src="images/MarkLogo.png" height="140" width="140">
-    </div>
 </td>
 <td>
-    <div id = 'mealEntryWords'>
+    <span class = 'mealEntryLogo' style = 'background-color: #e5e5ff'>
+        L
+    </span>
+    <div class = 'mealEntryWords'>
         <h3>Luke's Day</h3>
         <h4>Breakfast: Cheerios</h4>
         <h4>Lunch: Tuna Sandwich</h4>
         <h4>Dinner: Chicken Alfredo</h4>
     </div>
-    <div id = 'mealEntryLogo'>
-        <img src="images/LukeLogo.png" height="140" width="140">
-    </div>
 </td>
 <td>
-    <div id = 'mealEntryWords'>
+    <span class = 'mealEntryLogo' style = 'background-color: #e5cce5'>
+        Jh
+    </span>
+    <div class = 'mealEntryWords'>
         <h3>John's Day</h3>
         <h4>Breakfast: Cheerios</h4>
         <h4>Lunch: Tuna Sandwich</h4>
         <h4>Dinner: Chicken Alfredo</h4>
-    </div>
-    <div id = 'mealEntryLogo'>
-        <img src="images/JohnLogo.png" height="140" width="140">
     </div>
 </td>
 </tr>

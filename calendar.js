@@ -1,5 +1,5 @@
 $(function() {
-    var meals = 
+    var initMeals = 
         {
             breakfast: 
             [
@@ -65,6 +65,54 @@ $(function() {
             ]
         }
 
+    var today = new Date();
+    var sunday = new Date();
+    sunday.setDate(today.getDate()-today.getDay());
+    var saturday = new Date();
+    saturday.setDate(today.getDate()+6-today.getDay());
+    var m1 = sunday.getMonth()+1;
+    var d1 = sunday.getDate();
+    var m2 = saturday.getMonth()+1;
+    var d2 = saturday.getDate();
+    var output = (m1<10 ? '0' : '') + m1 + '/' + (d1<10 ? '0' : '') +d1+ '/' + sunday.getFullYear()
+    			+' - '+
+    			(m2<10 ? '0' : '') + m2 + '/' + (d2<10 ? '0' : '') +d2+ '/' + saturday.getFullYear();
+	$('#days').text(output);
+
+	$('#left-days').click(function(){
+	    sunday.setDate(sunday.getDate()-7);
+	    saturday.setDate(saturday.getDate()-7);
+	    var m1 = sunday.getMonth()+1;
+	    var d1 = sunday.getDate();
+	    var m2 = saturday.getMonth()+1;
+	    var d2 = saturday.getDate();
+	    var output = (m1<10 ? '0' : '') + m1 + '/' + (d1<10 ? '0' : '') +d1+ '/' + sunday.getFullYear()
+	    			+' - '+
+	    			(m2<10 ? '0' : '') + m2 + '/' + (d2<10 ? '0' : '') +d2+ '/' + saturday.getFullYear();
+		$('#days').text(output);
+	})
+	$('#right-days').click(function(){
+	    sunday.setDate(sunday.getDate()+7);
+	    saturday.setDate(saturday.getDate()+7);
+	    var m1 = sunday.getMonth()+1;
+	    var d1 = sunday.getDate();
+	    var m2 = saturday.getMonth()+1;
+	    var d2 = saturday.getDate();
+	    var output = (m1<10 ? '0' : '') + m1 + '/' + (d1<10 ? '0' : '') +d1+ '/' + sunday.getFullYear()
+	    			+' - '+
+	    			(m2<10 ? '0' : '') + m2 + '/' + (d2<10 ? '0' : '') +d2+ '/' + saturday.getFullYear();
+		$('#days').text(output);
+	})
+
+    var initialData = JSON.stringify(initMeals);
+
+    if(!sessionStorage.calendarData)
+    {
+      sessionStorage.calendarData = initialData;
+    }
+
+    var meals = jQuery.parseJSON(sessionStorage.calendarData);
+
     var nickname = {Joanne: 'Jo', Jimbob: 'Ji', Matthew: 'Mt', Mark: 'Mr', Luke: "L", John: "Jh"};
     var fam_colors = {Joanne: '#ffcccc', Jimbob: '#ffedcc', Matthew: '#ffffcc', Mark: '#cce5cc', Luke: '#e5e5ff', John: '#e5cce5'};
     var keys = Object.keys(meals);
@@ -84,7 +132,7 @@ $(function() {
                   var meal = day[k];
                   col += '<div class = "meal"><p><b>'+meal.meal+'</b></p>';
                   for (var l = 0; l < meal.members.length; l++){
-                      col += '<div class = "fam" style = "background-color:'+fam_colors[meal.members[l]]+'">'+nickname[meal.members[l]]+'</div>'
+                      col += '<div class = "fam" title = "'+meal.members[l]+'" style = "background-color:'+fam_colors[meal.members[l]]+'">'+nickname[meal.members[l]]+'</div>'
                   }
                   col += '</div>';
                 }
