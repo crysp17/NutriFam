@@ -14,10 +14,14 @@
            <a id = 'logo' href = 'index.html'><img src = 'nutri.png'></a>
         </li>
         <li id = "right">
-                <a id = 'usersite' href = 'usersettings.html'>
-                    <span id = 'tinyLogo' style = 'background-color: #ffcccc;'>Jo</span>
-                    <span id='user-bottom'>Joanne</span>
-                </a>
+                <div class="dropdown">
+                  <span id = 'tinyLogo' style = 'background-color: #ffcccc;'>Jo</span>
+                  <span id='user-bottom'>Joanne</span>
+                  <div class="dropdown-content">
+                    <span id="span-drop"><a href="usersettings.html" style='text-decoration: none;'>Settings</a></span>
+                    <span id="span-drop"><a href="login.html" style='text-decoration: none;'>Log Out</a></span>
+                  </div>
+                </div>
         </li>
         <li id = "center">
             <div id = 'dailytip'> 
@@ -31,7 +35,7 @@
     <ul class = nav nav-pills nav-stacked>
         <li> 
             <a href="index.html">
-                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Today's Eats
+                  <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span> Today's Eats
             </a> 
         </li>
         <li id="sidebar-selected"> 

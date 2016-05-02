@@ -14,10 +14,14 @@
            <a id = 'logo' href = 'index.html'><img src = 'nutri.png'></a>
         </li>
         <li id = "right">
-                <a id = 'usersite' href = "" style = "color: black;">
-                    <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-                    <span id='user-bottom'>Guest</span>
-                </a>
+                <div class="dropdown">
+                  <span id = 'tinyLogo' style = 'background-color: #ffcccc;'>Jo</span>
+                  <span id='user-bottom'>Joanne</span>
+                  <div class="dropdown-content">
+                    <span id="span-drop"><a href="usersettings.html" style='text-decoration: none;'>Settings</a></span>
+                    <span id="span-drop"><a href="login.html" style='text-decoration: none;'>Log Out</a></span>
+                  </div>
+                </div>
         </li>
         <li id = "center">
             <div id = 'dailytip'> 
@@ -35,11 +39,11 @@
         <input type="email" id="inputEmail" class="form-control" placeholder="Email Address"  autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" >
-        <button class="btn btn-lg btn-primary btn-block" style = "padding-bottom: 5px;" >Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" style = "padding-bottom: 5px;" >Sign In</button>
 
         <h5><span>or</span></h5>
 
-        <input class="btn btn-lg btn-primary btn-block" type="button" value="Sign Up" onclick = "clickreveal()">
+        <input class="btn btn-lg btn-primary btn-block" type="button" id = 'sign-up' value="Sign Up" onclick = "clickreveal()">
     </div>
     <div id = "reveal">
         <label for="inputName" class="sr-only">Name</label>

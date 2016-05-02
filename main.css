@@ -175,9 +175,6 @@ img {
     display: none;
     position: absolute;
     background-color: var(--secondary-bg-color);
-
-    /*min-width: 160px;
-    padding: 12px 16px;*/
 }
 
 #right .dropdown-content a {
@@ -188,6 +185,13 @@ img {
 #right .dropdown:hover .dropdown-content {
     display: inline;
     text-decoration: none;
+}
+
+#right .dropdown-content #span-drop:hover{
+    padding: 2px 13px 2px 2px;
+    text-align: center;
+    color: white;
+    background-color: var(--accent-bg-color);
 }
 
 
@@ -758,7 +762,7 @@ table#protein_table th {
 }
 
 .mealEntryWords h3{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 
 .mealEntryWords h4{
@@ -903,4 +907,13 @@ li .del-button{
     margin: auto;
 
     z-index: 100;
+}
+
+#login-main button{
+    background-color: var(--accent-bg-color);
+    border: none;
+}
+#sign-up{
+    background-color: var(--accent-bg-color);
+    border: none;
 }
