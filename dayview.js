@@ -48,14 +48,17 @@ $(function() {
       var mealName = foodForThisMeal[i]["meal"];
       var members = foodForThisMeal[i]["members"];
     
-      mealHTML = mealHTML + '<h2><li>' + mealName + ' ( ';
+      mealHTML = mealHTML + '<h2><li>' + mealName + '</li></h2>';
 
+      mealHTML = mealHTML + '<ul><li><h3>';
       for(var j=0; j<members.length; j++)
       {
-        mealHTML += members[j] + " ";
+        mealHTML += members[j];
+        if (j != members.length - 1) {
+          mealHTML += ", ";
+        }
       }
-
-      mealHTML = mealHTML + ')</li></h2>'
+      mealHTML = mealHTML + '</h3></li></ul>';
 
     }
 
