@@ -9,21 +9,34 @@
 
 <body>
 <nav id = 'header' class = 'navbar navbar-default'>
-    <ul class = 'nav navbar-nav navbar-left'>
-        <a id = 'logo' href = 'index.html'><img src = 'nutri.png' height = '125' width = '500'></a>
-    </ul>
-    <ul class = 'nav navbar-nav navbar-right'>
-        <div id = 'dailytip'> 
-            <p><b>Tip of the Day</b></p>
-            <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
-        </div>
+    <ul>
+        <li class = "active">
+           <a id = 'logo' href = 'index.html'><img src = 'nutri.png'></a>
+        </li>
+        <li id = "right">
+                <a id = 'usersite' href = 'usersettings.html'>
+                    <span id = 'tinyLogo' style = 'background-color: #ffcccc;'>Jo</span>
+                    <span id='user-bottom'>Joanne</span>
+                </a>
+        </li>
+        <li id = "center">
+            <div id = 'dailytip'> 
+                <p><b>Tip of the Day</b></p>
+                <p>Avocados are rich in monounsaturated fat and vitamin E, both of which promote healthy skin. </p>
+            </div>
+        </li>
     </ul>
 </nav>
 <div id = 'sidebar'>
     <ul class = nav nav-pills nav-stacked>
         <li> 
+            <a href="index.html">
+                  <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Today's Eats
+            </a> 
+        </li>
+        <li id="sidebar-selected"> 
             <a href="calendar.html">
-                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Calendar
+                  <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Week's Eats
             </a> 
         </li>
         <li> 
@@ -32,21 +45,19 @@
             </a> 
         </li>
         <li role="presentation" class="dropdown" id = 'famprof'>
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              Family Nutrition <span class="caret"></span>
-            </a>
+            <span id = 'nutri-rep'>
+                <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Nutrition Reports
+            </span>
             <ul class="dropdown-menu">
-                <li><a href="#">Joanne</a></li>
+                <li><a href="joanne.html">Joanne</a></li>
                 <li><a href="jimbob.html">Jimbob</a></li>
-                <li><a href="#">Matthew</a></li>
-                <li><a href="#">Mark</a></li>
-                <li><a href="#">Luke</a></li>
-                <li><a href="#">John</a></li>
+                <li><a href="matthew.html">Matthew</a></li>
+                <li><a href="mark.html">Mark</a></li>
+                <li><a href="luke.html">Luke</a></li>
+                <li><a href="john.html">John</a></li>
             </ul>
         </li>
     </ul>
-</div>
-<div id = 'main'>
 </div>
 <!-- Load style sheets -->
 <link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -59,25 +70,25 @@
             <h1 style="margin:auto;font-weight:bold">Dinner Plans for Thursday, April 14th</h1>
         </div>
         <div id = 'day-content'>
-          <button id = 'add-meal' style = 'width: 50px; height: 50px; margin-left:30px; float: left' onclick="toggle_visibility('popupBoxOnePosition');">+</button>
+          <button id = 'add-meal' style = 'margin-left:30px; float: left' onclick="toggle_visibility('popupBoxOnePosition');">+</button>
           <h2 style = 'margin-left:100px; margin-top: 10px;'>Add Recipe From Recipe Book</h2>
           <div id="popupBoxOnePosition">
             <div class="popupBoxWrapper">
               <div class="popupBoxContent">
                 <h3>Recipes</h3>
-                <div style = 'float: left; width: 550px;'>
-                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'width: 30px; height: 30px; margin-left:30px;'>+</button>
-                  <p style = "margin-right: 425px; float: right; margin-top: 5px">Lasagna</p>
+                <div style = 'text-align:left'>
+                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'margin-left:30px;'>+</button>
+                  <span style = "margin-top: 5px">Lasagna</span>
                 </div>
-                <div style = "float: left; width: 550px;">
-                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'width: 30px; height: 30px; margin-left:30px;'>+</button>
-                  <p style = "margin-right: 405px; float: right; margin-top: 5px">Pork Chops</p>
+                <div>
+                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'margin-left:30px;'>+</button>
+                  <span style = "margin-top: 5px">Pork Chops</span>
                 </div>
-                <div style = 'float: left; width: 550px;'>
-                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'width: 30px; height: 30px; margin-left:30px;'>+</button>
-                  <p style = "margin-right: 372px; float: right; margin-top: 5px">Chicken Tenders</p>
+                <div>
+                  <button onclick="toggle_visibility('popupBoxTwoPosition');" id = 'add-meal' style = 'margin-left:30px;'>+</button>
+                  <span style = "margin-top: 5px">Chicken Tenders</span>
                 </div>
-                <p style = "margin-left: 450px;"><a href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">Go back</a></p>
+                <div style = 'text-align: right'><a href="javascript:void(0)" onclick="toggle_visibility('popupBoxOnePosition');">Go back</a></div>
               </div>
             </div>
           </div>
@@ -100,8 +111,10 @@
               <input type = 'checkbox' class = 'recipe-check'>  John</input>
               <br>
               <br>
-              <button onclick="location.href='calendarwiththursday.html'" id = 'save-recipe-to-calendar' style = 'width: 100px; height: 50px; float: left;'>Save to Calendar</button>
-              <p style = "margin-left: 450px;"><a href="javascript:void(0)" onclick="toggle_visibility('popupBoxTwoPosition');">Go back</a></p>
+              <div style = 'text-align:right;'>
+                <button onclick="location.href='calendarwiththursday.html'" id = 'save-recipe-to-calendar' style = 'float: left;'>Save to Calendar</button>
+                <a href="javascript:void(0)" onclick="toggle_visibility('popupBoxTwoPosition');">Go back</a>
+              </div>
               <br>
             </div>
           </div>
