@@ -630,12 +630,12 @@ svg{
 table#calorie_table {
     font-size: 1.0vw;
     border-spacing:5px;
-    float:right;
+    /*float:right;*/
     display: inline;
     margin:5%;
     border: solid;
     border-color: gray;
-    margin-left: 0px;
+    margin-left: 10px;
 }
 table#calorie_table td {
     padding-left: 15px;

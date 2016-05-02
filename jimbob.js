@@ -39,7 +39,7 @@ $(function generateDailyPi() {
 })
 
 $(function generateWeeklyPi() {
-    var famday = { JimbobWeek:[{label: 'Fat', value: 34.7},{label: 'Protein', value: 14.9},{label: 'Carbs', value: 50.4}], }
+    var famday = { JimbobWeek:[{label: 'Fat', value: 40.2},{label: 'Protein', value: 10.8},{label: 'Carbs', value: 49.0}], }
     var width = 280;
     var height = 280;
     var radius = Math.min(width,height)/2;
@@ -79,7 +79,7 @@ $(function generateWeeklyPi() {
 })
 
 $(function generateMonthlyPi() {
-    var famday = { JimbobMonth:[{label: 'Fat', value: 34.7},{label: 'Protein', value: 14.9},{label: 'Carbs', value: 50.4}], }
+    var famday = { JimbobMonth:[{label: 'Fat', value: 32.3},{label: 'Protein', value: 9.6},{label: 'Carbs', value: 58.1}], }
     var width = 280;
     var height = 280;
     var radius = Math.min(width,height)/2;
