@@ -838,9 +838,9 @@ li .del-button{
     font-size: 1.0vw;
 }
 
-.breakfast0, .breakfast1, .breakfast2, .breakfast3, .breakfast4, .breakfast5, .breakfast6,
-.lunch0, .lunch1, .lunch2, .lunch3, .lunch4, .lunch5, .lunch6,
-.dinner0, .dinner1, .dinner2, .dinner3, .dinner4, .dinner5, .dinner6
+#breakfast0, #breakfast1, #breakfast2, #breakfast3, #breakfast4, #breakfast5, #breakfast6,
+#lunch0, #lunch1, #lunch2, #lunch3, #lunch4, #lunch5, #lunch6,
+#dinner0, #dinner1, #dinner2, #dinner3, #dinner4, #dinner5, #dinner6
 {
     position: absolute;
     bottom: 0;
@@ -852,4 +852,6 @@ li .del-button{
 
     display: block;
     margin: auto;
+
+    z-index: 100;
 }

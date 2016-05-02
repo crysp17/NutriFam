@@ -74,6 +74,9 @@ $(function() {
     var d1 = sunday.getDate();
     var m2 = saturday.getMonth()+1;
     var d2 = saturday.getDate();
+
+    alert(m1 + " " + d1 + " " + m2 + " " + d2);
+
     var output = (m1<10 ? '0' : '') + m1 + '/' + (d1<10 ? '0' : '') +d1+ '/' + sunday.getFullYear()
     			+' - '+
     			(m2<10 ? '0' : '') + m2 + '/' + (d2<10 ? '0' : '') +d2+ '/' + saturday.getFullYear();
@@ -139,12 +142,44 @@ $(function() {
                   col += '</div>';
                 }
             }
-            col += '<a href="dayview.html"><img src = "images/pencil.png" class = "' + keys[i] + '' + j + '" ></a>';
+            col += '<img src = "images/pencil.png" id = "' + keys[i] + '' + j + '" >';
             col += '</td>';
             row.append(col);   
         }
 
     }
+
+    $("#breakfast0").click(function () {
+      editClicked(this);
+    });
+
+    $("#breakfast1").click(function () {
+      editClicked(this);
+    });
+
+    $("#breakfast2").click(function () {
+      editClicked(this);
+    });
+
+    $("#breakfast3").click(function () {
+      editClicked(this);
+    });
+
+    $("#breakfast4").click(function () {
+      editClicked(this);
+    });
+
+    $("#breakfast5").click(function () {
+      editClicked(this);
+    });
+
+    $("#breakfast6").click(function () {
+      editClicked(this);
+    });
+
+    $("#lunch0").click(function () {
+      editClicked(this);
+    });
 
     var table = $('calendar');
     /*
@@ -197,3 +232,8 @@ $(function() {
     */
 
 })
+
+function editClicked(obj)
+    {
+      window.alert(obj.id);
+    }
