@@ -758,7 +758,7 @@ table#protein_table th {
 }
 
 .mealEntryWords h3{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 
 .mealEntryWords h4{
@@ -903,4 +903,13 @@ li .del-button{
     margin: auto;
 
     z-index: 100;
+}
+
+#login-main button{
+    background-color: var(--accent-bg-color);
+    border: none;
+}
+#sign-up{
+    background-color: var(--accent-bg-color);
+    border: none;
 }
