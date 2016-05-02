@@ -599,6 +599,7 @@ svg{
 .popupBoxWrapper
 {
     width: 550px; margin-left: 450px; margin-top: 300px; text-align: left;
+    border-style: solid;
 }
 
 .popupBoxContent
