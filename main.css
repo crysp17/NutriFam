@@ -524,6 +524,12 @@ svg{
 #profile-first-row{
     font-size: 1.6vw;
 }
+#profile-first-row h3{
+    font-weight: bold;
+}
+#profile-first-row h3,h4{
+    font-size:1.6vw;
+}
 #Jimbob-calorie-source {
     float: left;
     text-align:center;
@@ -634,6 +640,7 @@ svg{
 .popupBoxWrapper
 {
     width: 550px; margin-left: 450px; margin-top: 300px; text-align: left;
+    border-style: solid;
 }
 
 .popupBoxContent

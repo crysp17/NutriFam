@@ -37,6 +37,7 @@ $(function() {
           .text(function(d, ind) { return famday[fam[i]][ind].label; });
     }
    
+    $("#day-title").innerHTML = '<h1 style="margin:auto;font-weight:bold">sessionStorage.editClickedInfo</h1>';
 })
 
 function toggle_visibility(id) {
