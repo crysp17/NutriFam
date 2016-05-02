@@ -674,6 +674,12 @@ svg{
 .popupBoxContent a:hover{
     text-decoration: none;
 }
+
+#popup-title
+{
+    
+}
+
 table#calorie_table {
     font-size: 1.0vw;
     border-spacing:5px;

@@ -38,6 +38,7 @@ $(function() {
     }
    
     document.getElementById("day-title").innerHTML = '<h1 style="margin:auto;font-weight:bold">' + sessionStorage.editClickedInfo + '</h1>';
+    document.getElementById("popup-title").innerHTML = sessionStorage.editClickedInfo;
 
     var foodForThisMeal = jQuery.parseJSON(sessionStorage.editClickedMealList);
 
