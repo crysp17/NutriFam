@@ -41,11 +41,9 @@ $(function() {
 
     var foodForThisMeal = jQuery.parseJSON(sessionStorage.editClickedMealList);
 
-    alert(Object.keys(foodForThisMeal[0])[0]);
-
     if(Object.keys(foodForThisMeal[0])[0] != "meal")
     {
-      
+      document.getElementById("day-content").innerHTML = '<br>' + document.getElementById("day-content").innerHTML;
     }
     else
     {
