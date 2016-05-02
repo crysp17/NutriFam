@@ -152,7 +152,6 @@ img {
     display: inline;
     padding-left: 7px;
 }
-
 #usersite{
     color: var(--main-text-color);
     font-size: 130%;
@@ -160,6 +159,36 @@ img {
 #usersite:hover{
     text-decoration: none;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+    padding: 15px;
+    font-size: 18px;
+    color: var(--main-text-color);
+    text-decoration: none; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-bg-color);
+
+    /*min-width: 160px;
+    padding: 12px 16px;*/
+}
+
+.dropdown-content a {
+    display: inline;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline;
+    text-decoration: none;
+}
+
 
 @media all and (max-width: 1100px)  {
   #center {
@@ -382,8 +411,14 @@ svg{
     margin-left: 25px;
 }
 
-#settings th,td{
-    padding: 4px;
+#settings th, #settings td{
+    padding: 6px;
+}
+
+@media all and (max-width: 1200px){
+    #settings th, #settings td{
+        padding: 4px;
+    }
 }
 
 #directions{
@@ -488,6 +523,12 @@ svg{
 
 #profile-first-row{
     font-size: 1.6vw;
+}
+#profile-first-row h3{
+    font-weight: bold;
+}
+#profile-first-row h3,h4{
+    font-size:1.6vw;
 }
 #Jimbob-calorie-source {
     float: left;
@@ -599,6 +640,7 @@ svg{
 .popupBoxWrapper
 {
     width: 550px; margin-left: 450px; margin-top: 300px; text-align: left;
+    border-style: solid;
 }
 
 .popupBoxContent
@@ -736,7 +778,7 @@ table#protein_table th {
     font-size: 25pt;
     text-align: center;
 }
-#settings-table{
+#settings-table, #settings-table-2{
     margin: auto;
 }
 #settings-header{
@@ -765,6 +807,12 @@ table#protein_table th {
     background: linear-gradient(#d8eff3,#addce6);
     border-radius: 10px;
     border:none;
+
+    width: 40%;
+    float: right;
+    margin: 10px auto 0 auto;
+    position: relative;
+    left: -36%;
 }
 
 .in-name{
