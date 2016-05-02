@@ -493,6 +493,7 @@ svg{
     float: left;
     text-align:center;
     margin: 20px;
+    margin-right: 10px;
 }  
 #Jimbobpie {
     float:left;
@@ -627,14 +628,14 @@ svg{
     text-decoration: none;
 }
 table#calorie_table {
-    font-size: 1.6vw;
+    font-size: 1.0vw;
     border-spacing:5px;
-    /*float:right;*/
+    float:right;
     display: inline;
     margin:5%;
     border: solid;
     border-color: gray;
-    margin-right:190px;
+    margin-left: 0px;
 }
 table#calorie_table td {
     padding-left: 15px;
@@ -659,6 +660,7 @@ table#lipid_table {
     margin:5%;
     border: solid;
     border-color: gray;
+    margin-top:20px;
 }
 table#lipid_table td {
     padding-left: 15px;
@@ -683,6 +685,7 @@ table#protein_table {
     margin:5%;
     border: solid;
     border-color: gray;
+    margin-top:20px;
 }
 table#protein_table td {
     padding-left: 15px;
