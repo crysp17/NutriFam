@@ -41,32 +41,39 @@ $(function() {
 
     var foodForThisMeal = jQuery.parseJSON(sessionStorage.editClickedMealList);
 
-    var mealHTML = '<ul>';
+    alert(Object.keys(foodForThisMeal[0])[0]);
 
-    for(var i=0; i<foodForThisMeal.length; i++)
+    if(Object.keys(foodForThisMeal[0])[0] != "meal")
     {
-      var mealName = foodForThisMeal[i]["meal"];
-      var members = foodForThisMeal[i]["members"];
-      if (members == undefined){
-        members = []
-      }
-      mealHTML = mealHTML + '<h2><li>' + mealName + '</li></h2>';
-
-      mealHTML = mealHTML + '<ul><li><h3>';
-      for(var j=0; j<members.length; j++)
-      {
-        mealHTML += members[j];
-        if (j != members.length - 1) {
-          mealHTML += ", ";
-        }
-      }
-      mealHTML = mealHTML + '</h3></li></ul>';
-
+      
     }
+    else
+    {
+      var mealHTML = '<ul>';
 
-    mealHTML += '</ul>';
+      for(var i=0; i<foodForThisMeal.length; i++)
+      {
+        var mealName = foodForThisMeal[i]["meal"];
+        var members = foodForThisMeal[i]["members"];
+      
+        mealHTML = mealHTML + '<h2><li>' + mealName + '</li></h2>';
 
-    document.getElementById("day-content").innerHTML = mealHTML + document.getElementById("day-content").innerHTML;
+        mealHTML = mealHTML + '<ul><li><h3>';
+        for(var j=0; j<members.length; j++)
+        {
+          mealHTML += members[j];
+          if (j != members.length - 1) {
+            mealHTML += ", ";
+          }
+        }
+        mealHTML = mealHTML + '</h3></li></ul>';
+
+      }
+
+      mealHTML += '</ul>';
+
+      document.getElementById("day-content").innerHTML = mealHTML + document.getElementById("day-content").innerHTML;
+    }
 
 
 
