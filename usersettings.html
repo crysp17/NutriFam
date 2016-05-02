@@ -5,6 +5,42 @@
 <head>
 <meta charset="UTF-8">
 <title>NutriFam</title>
+<!-- Load style sheets -->
+<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<!-- Load any supplemental Javascript libraries here -->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script>
+function myFunction() {
+    var name = 'NAME';
+    var age = 1000;
+    var weight = 500;
+    var gender = 'Female';
+    var activity = 'Sedentary';
+    var goal = 'Lower Weight';
+    var goalgrad = 'Lower';
+    var goaltype = 'Weight';
+    var goalcheck = true;
+
+    name = document.getElementById("entered-name").value;
+    age = document.getElementById("entered-age").value;
+    weight = document.getElementById("entered-weight").value;
+    gender = document.getElementById("entered-gender").value;
+    activity = document.getElementById("entered-activity").value;
+    goalgrad = document.getElementById("entered-goalgrad").value;
+    goaltype = document.getElementById("entered-goaltype").value;
+    goalcheck = document.getElementById("entered-goalcheck").value;
+    goal = goalgrad + ' ' + goaltype;
+
+    var newrow = "<tr style = 'font-size: 16px; display: none;'><td id = 'name'><span id = 'tinyLogo' style = 'background-color: var(--main-bg-color)'>NA</span>"+name+"</td><td id = "+age+">AGE</td><td id = "+gender+">GENDER</td><td id = 'flash'><span id = 'active1' class='glyphicon glyphicon-flash' aria-hidden='true' style = 'float: right';><span id == 'active2' class='glyphicon glyphicon-flash' aria-hidden='true' style = 'float: right;'></span></td><td id = "+activity+">ACTIVITY</td><td></td><td id = "+goal+">GOAL</td><td id = "+weight+">WEIGHT</td></tr>";
+    $('#settings-table tr:last').after("<tr><td>"+name+"</td><td>"+age+"</td><td>"+gender+"</td><td></td><td>"+activity+"</td><td></td><td>"+goal+"</td><td style='text-align: center;'>"+weight+"</td></tr>");
+}
+</script>
 </head>
 
 <body>
@@ -65,7 +101,7 @@
 </div>
 <!-- User settings main content -->
 <div id = 'main'>
-    <span id='settings-top' style='margin-left: 26%'><b>Your Family Members</b></span>
+    <span id='settings-top' style='margin-left: 35%; width: 50%;'><b>Your Family Members</b></span>
     <span class="glyphicon glyphicon-stroller"></span>
     <div>
             <table id = 'settings-table'>
@@ -145,12 +181,12 @@
                     <td id = "goal">GOAL</td>
                     <td id = "wght">WEIGHT</td>
                   </tr> -->
-
+                
+            </table>
+            <table id = "settings-table-2">
                 <tr>
                       <td colspan="8"><hr/></td>
                 </tr>
-            </table>
-            <table id = "settings-table-2">
                 <tr id = 'settings-header-2'>
                     <td>Name</td>
                     <td>Age</td>
@@ -163,12 +199,12 @@
                 </tr>
 
                 <tr class = 'newMember'>
-                    <td><input class = 'in-name'></input></td>
+                    <td><input class = 'in-name' id = "entered-name"></input></td>
                     <td>
-                        <input type = 'number' class = 'in-age'></input> 
+                        <input type = 'number' class = 'in-age' id = "entered-age"></input> 
                     </td>
                     <td>
-                        <select class = 'in-gender'>
+                        <select class = 'in-gender' id = "entered-gender">
                             <option value = 'Male'>Male</option>
                             <option value = 'Female'>Female</option>
                             <option value = 'Other'>Other</option>
@@ -176,107 +212,36 @@
                     </td>
                     <td></td>
                     <td>
-                        <select class = 'in-activity'>
-                            <option value = 'Light'>Sedentary</option>
+                        <select class = 'in-activity' id = "entered-activity">
+                            <option value = 'Sedentary'>Sedentary</option>
                             <option value = 'Moderate'>Moderate</option>
-                            <option value = 'Very'>Very Active</option>
+                            <option value = 'Very Active'>Very Active</option>
                         </select>
                     </td>
                     <td></td>
                     <td>
-                        <input type = 'checkbox' class = 'in-goalcheck'></input>
-                        <select class = 'in-goalgrad'>
+                        <input type = 'checkbox' class = 'in-goalcheck' id = "entered-goalcheck"></input>
+                        <select class = 'in-goalgrad' id = "entered-goalgrad">
                             <option value = 'Lower'>Lower</option>
                             <option value = 'Maintain'>Maintain</option>
                             <option value = 'Increase'>Increase</option>
                         </select>
-                        <select class = 'in-goaltype'>
+                        <select class = 'in-goaltype' id = "entered-goaltype">
                             <option value = 'Weight'>Weight</option>
                             <option value = 'Cholesterol'>Cholesterol</option>
                             <option value = 'Mineral'>Specific Mineral</option>
                         </select>
                     </td>
                     <td>
-                        <input type = 'number' class = 'in-weight'></input> 
+                        <input type = 'number' class = 'in-weight' id = "entered-weight"></input> 
                     </td>
                 </tr>
               </table>
-              <button id = 'add-member' >+</button>
+              <!-- <button id = 'add-member'>+</button> -->
+              <button type="button" onclick="myFunction()" style="margin-left: 25%; width: 50%; border-radius: 10px; border: none; background-color: var(--main-bg-color);"> + </button>
         </div>
 
-    <p id="DEBUG"></p>
 </div>
-
-<!-- Load style sheets -->
-<link href="bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="main.css" />
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-
-<!-- Load any supplemental Javascript libraries here -->
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-
-<script>
-$(document).ready(function(){
-    $('#DEBUG').innerHTML = 'in func'
-    $('#add-member').click(function() {    
-        $('#DEBUG').innerHTML = 'in click'
-
-        var name = 'NAME'
-        var age = 1000
-        var weight = 500
-        var gender = 'Female'
-        var activity = 'Sedentary'
-        var goal = 'Lower Weight'
-        var goalgrad = 'Lower'
-        var goaltype = 'Weight'
-        var goalcheck = true
-
-        $('.in-name').focusout(function(){
-             name = $(this).val();
-        });
-        $('.in-age').focusout(function(){
-             age = $(this).val(Math.abs($(this).val()));
-        });
-        $('.in-weight').focusout(function(){
-             weight = $(this).val(Math.abs($(this).val()));
-        });
-        $('.in-gender').focusout(function(){
-             gender = $(this).val();
-        });
-        $('.in-activity').focusout(function(){
-             activity = $(this).val();
-            if (activity == 'Moderate'){
-                $('#active1').css('display','none');
-            } else if (activity == 'Sedentary'){
-                $('#active1').css('display','none');
-                $('#active2').css('display','none');
-            }
-        });
-        $('.in-goalgrad').focusout(function(){
-             goalgrad = $(this).val();
-        });
-        $('.in-goaltype').focusout(function(){
-             goaltype = $(this).val();
-        });
-        $('.in-goalcheck').focusout(function(){
-             goalcheck = $(this).val();
-            if (goalcheck == false){
-                $('#goal').css('display','none');
-            } else {
-                 goal = goalgrad + ' ' + goaltype;
-            }
-        });
-
-        $('#DEBUG').innerHTML = name + ' ' + age
-
-        var newrow = "<tr class = 'currentMembers' style = 'font-size: 16px; display: none;'><td id = "+name+"><span id = 'tinyLogo' style = 'background-color: var(--main-bg-color)'>NA</span>NAME</td><td id = "+age+">AGE</td><td id = "+gender+">GENDER</td><td id = 'flash'><span id = 'active1' class='glyphicon glyphicon-flash' aria-hidden='true' style = 'float: right';><span id == 'active2' class='glyphicon glyphicon-flash' aria-hidden='true' style = 'float: right;'></span></td><td id = "+activity+">ACTIVITY</td><td></td><td id = "+goal+">GOAL</td><td id = "+weight+">WEIGHT</td></tr>"
-        $('#settings-table tr:last').after(newrow);
-    });
-});
-</script>
 
 </body>
 
