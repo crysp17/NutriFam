@@ -41,7 +41,7 @@ $(function() {
 
     var foodForThisMeal = jQuery.parseJSON(sessionStorage.editClickedMealList);
 
-    if(Object.keys(foodForThisMeal[0])[0] != "meal")
+    if(Object.keys(foodForThisMeal[0])[0] != "meal" && foodForThisMeal.length < 2)
     {
       document.getElementById("day-content").innerHTML = '<br>' + document.getElementById("day-content").innerHTML;
     }
@@ -51,20 +51,23 @@ $(function() {
 
       for(var i=0; i<foodForThisMeal.length; i++)
       {
-        var mealName = foodForThisMeal[i]["meal"];
-        var members = foodForThisMeal[i]["members"];
-      
-        mealHTML = mealHTML + '<h2><li>' + mealName + '</li></h2>';
-
-        mealHTML = mealHTML + '<ul><li><h3>';
-        for(var j=0; j<members.length; j++)
+        if(Object.keys(foodForThisMeal[i])[0] == "meal")
         {
-          mealHTML += members[j];
-          if (j != members.length - 1) {
-            mealHTML += ", ";
+          var mealName = foodForThisMeal[i]["meal"];
+          var members = foodForThisMeal[i]["members"];
+        
+          mealHTML = mealHTML + '<h2><li>' + mealName + '</li></h2>';
+
+          mealHTML = mealHTML + '<ul><li><h3>';
+          for(var j=0; j<members.length; j++)
+          {
+            mealHTML += members[j];
+            if (j != members.length - 1) {
+              mealHTML += ", ";
+            }
           }
+          mealHTML = mealHTML + '</h3></li></ul>';
         }
-        mealHTML = mealHTML + '</h3></li></ul>';
 
       }
 
