@@ -36,7 +36,7 @@ $(function() {
           .style("font-size", "14px")
           .text(function(d, ind) { return famday[fam[i]][ind].label; });
     }
-   
+    
 })
 
 function toggle_visibility(id) {

@@ -42,7 +42,7 @@ $(function() {
              {meal:'Chicken Salad', members:['Mark', 'Matthew', 'Luke', 'John']}],
 
             [{meal: 'Chef Salad', members: ['Joanne', 'Jimbob']},
-             {meal:'Turkey $ Swiss', members:['Mark', 'Matthew', 'Luke', 'John']}],
+             {meal:'Turkey & Swiss', members:['Mark', 'Matthew', 'Luke', 'John']}],
 
             [{meal: 'Fried Chicken', members: ['Joanne', 'Jimbob','Mark', 'Matthew', 'Luke', 'John']}]
             ],
@@ -116,16 +116,18 @@ $(function() {
     var nickname = {Joanne: 'Jo', Jimbob: 'Ji', Matthew: 'Mt', Mark: 'Mr', Luke: "L", John: "Jh"};
     var fam_colors = {Joanne: '#ffcccc', Jimbob: '#ffedcc', Matthew: '#ffffcc', Mark: '#cce5cc', Luke: '#e5e5ff', John: '#e5cce5'};
     var keys = Object.keys(meals);
+
     for (var i = 0; i < keys.length; i++){
+        //m = breakfast, lunch, or dinner
         var m = meals[keys[i]];
         var row = $('#'+keys[i]);
         for (var j = 0; j < m.length; j++){
             var day = m[j]
-            var col = '<td>';
+            var col = '<td style = "position: relative;">';
             for (var k = 0; k < day.length; k++){
                 if(day[k].meal == null)
                 {
-                  col += '<div class = "meal"><p><b><a href="dayview.html">Add a meal</a></b></p>';
+                  //col += '<div class = "meal"><p><b><a href="dayview.html">Add a meal</a></b></p>';
                 }
                 else
                 {
@@ -137,6 +139,7 @@ $(function() {
                   col += '</div>';
                 }
             }
+            col += '<a href="dayview.html"><img src = "images/pencil.png" class = "' + keys[i] + '' + j + '" ></a>';
             col += '</td>';
             row.append(col);   
         }
