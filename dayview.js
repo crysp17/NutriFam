@@ -57,7 +57,7 @@ $(function() {
           var mealName = foodForThisMeal[i]["meal"];
           var members = foodForThisMeal[i]["members"];
         
-          mealHTML = mealHTML + '<h2><li>' + mealName + '        <button class = "add-meal" id = "button' + i + '">-</button></li></h2>';
+          mealHTML = mealHTML + '<div><h2><li>' + mealName + ' <button class = "del-meal" value = '+i+'>-</button></li></h2>';
 
           mealHTML = mealHTML + '<ul><li><h3>';
           for(var j=0; j<members.length; j++)
@@ -67,7 +67,7 @@ $(function() {
               mealHTML += ", ";
             }
           }
-          mealHTML = mealHTML + '</h3></li></ul>';
+          mealHTML = mealHTML + '</h3></li></ul></div>';
         }
 
       }
@@ -76,12 +76,18 @@ $(function() {
 
       document.getElementById("day-content").innerHTML = mealHTML + document.getElementById("day-content").innerHTML;
 
-      for(var i = 0; i <foodForThisMeal.length; i++)
-      {
-        document.getElementById("button" + i + "").click( function () {
-          window.alert("Remove meal: " + foodForThisMeal[i]);
+
+        $(".del-meal").click( function () {
+          var calData = JSON.parse(sessionStorage.calendarData)
+          var i = $(this).val();
+          console.log(i);
+          var mealType = sessionStorage.editClickedInfo.split(' ')[0].toLowerCase();
+          var dateOffset = sessionStorage.dateOffset;
+          calData[mealType][dateOffset].splice(i,1);
+          sessionStorage.calendarData = JSON.stringify(calData);
+          $(this).parent().parent().parent().remove();
+
         });
-      }
     }
 
 
@@ -102,7 +108,6 @@ $(function() {
         sessionStorage.recipes = JSON.stringify(recipes)
     }
     recipes = Object.keys(JSON.parse(sessionStorage.recipes))
-    console.log(recipes);
     for (var i = 0; i < recipes.length; i++){
       var popup = $('#popup-recipes');
       popup.append('<div><button class = "add-meal" style = "margin-left:30px;">+</button><span style = "margin-top: 5px">'+recipes[i]+'</span></div>');
