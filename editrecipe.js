@@ -39,9 +39,10 @@ $(function() {
         $('#directions').append(newlist);
     }
     var currIng = currRec.ingredients;
+    console.log(currIng);
     for (var i  = 0; i < currIng.length; i++){
         var ci = currIng[i];
-        var newrow = "<tr class = 'ingredient'><td><input class = 'in-item' value="+ci.item+"></input></td><td><input type = 'number' class = 'in-amt' value = "+ci.amount+"></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td><td><button class = 'del-button'>x</button></td></tr>"
+        var newrow = "<tr class = 'ingredient'><td><input class = 'in-item' value='"+ci.item+"'></input></td><td><input type = 'number' class = 'in-amt' value = "+ci.amount+"></input> </td><td><select class = 'in-unit'><option value = 'lb.'>lb.</option><option value = 'oz.'>oz.</option><option value = 'tbsp.'>tbsp.</option><option value = 'cup'>cup</option></select></td><td><button class = 'del-button'>x</button></td></tr>"
         $('#ingredients tr:last').after(newrow);
         var u = $('#ingredients tr:last').find('.in-unit');
         u.val(ci.unit);
